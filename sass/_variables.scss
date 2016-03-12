@@ -11,8 +11,11 @@ $grey: #797878;
 
 $light-blue: #dae9f2;
 $orange: #d88832;
+$orange--dark: #BF792D;
 
 $accent: $orange;
+$accent--darker: $orange--dark;
 
 $default-font: $grey--dark;
-$hover-color: $accent;
+$default-link: $accent;
+$hover: $accent--darker;

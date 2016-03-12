@@ -29,3 +29,18 @@ h2 {
 h3 {
 	font-family: 'Garamond', serif;
 }
+
+
+
+//////////////////
+//  LINKS  //////
+////////////////
+
+a {
+	color: $default-link;
+	text-decoration: none;
+	border-bottom: 2px solid $default-link;
+	&:hover {
+		color: $hover;
+	}
+}
