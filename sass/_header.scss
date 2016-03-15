@@ -3,14 +3,28 @@
 ////////////////
 
 nav {
-	background-color: $white;
-	width: 100%;
+  @include boxshadow($grey--light);
+
+  height: 80px;
+  width: 100%;
+
+  background-color: $white;
 }
 
-.header-nav-menu {
+nav .header-nav-menu {
+  li {
+    display: inline-block;
+    padding: 0 3%;
 
-	li {
-		display: inline-block;
-	}
+    line-height: 80px;
+  }
+  a {
+    border: 0;
 
+    color: $default-font;
+    font-size: 1em;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+  }
 }

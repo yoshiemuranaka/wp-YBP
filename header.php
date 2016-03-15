@@ -11,8 +11,15 @@
 
 <div id="page" class="site">
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'header-nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<div class="grid">
+				<div class="col one-third sm-two-thirds alpha"><h3><a href="/wp-YBP">ybp</a></h3></div>
+				<div class="col two-thirds sm-one-third omega">
+					<div class="hide-sm">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'header-nav-menu' ) ); ?>
+					</div>
+				</div>
+			</div>
+	</nav><!-- #site-navigation -->
 	
 	<div id="content" class="site-content">
 

@@ -7,29 +7,55 @@ body {
 	background: $grey--light;
 	color: $default-font;
 	font-family: 'Garamond', serif;
+	font-size: 16px;
 }
 
+#page {
+	min-height: 100%;
+	position: relative;
+}
 
 //////////////////
 //  TYPE  ///////
 ////////////////
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
+	// letter-spacing: 0.015em;
+}
+
 h1 {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 500;
-	font-size: 2em;
+  margin-bottom: 0.5em;
+
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1.5em;
 }
 
 h2 {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 500;
-	font-size: 1.5em;
+  margin-bottom: 0.5em;
+
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.2em;
 }
 
 h3 {
-	font-family: 'Garamond', serif;
+	margin-bottom: 0.5em;
+
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.2em;
 }
 
+
+
+p {
+	font-family: 'Garamond', serif;
+	font-size: 1.15em;
+  letter-spacing: 0.02em;
+  line-height: 1.65em;
+}
 
 
 //////////////////
@@ -37,10 +63,29 @@ h3 {
 ////////////////
 
 a {
-	color: $default-link;
-	text-decoration: none;
-	border-bottom: 2px solid $default-link;
-	&:hover {
-		color: $hover;
-	}
+  border-bottom: 2px solid $default-link;
+
+  color: $default-link;
+  text-decoration: none;
+  &:hover {
+    color: $hover;
+  }
+}
+
+
+///////////////////
+//  UTILITIES  ///
+//////////////////
+
+.hide-sm {
+  @include mq(small-only){
+    display: none;
+  }
+}
+
+.show-sm {
+  display: block;
+  @include mq(medium){
+    display: none;
+  }
 }
