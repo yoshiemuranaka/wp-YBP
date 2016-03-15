@@ -131,6 +131,8 @@ table {
 html,
 body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -145,14 +147,17 @@ body {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
 }
 
 h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
+  font-family: 'Garamond', serif;
   font-size: 2em;
+  font-variant: small-caps;
   font-weight: 500;
+  letter-spacing: 0.15em;
   line-height: 1.5em;
 }
 
@@ -209,6 +214,15 @@ nav {
   width: 100%;
   background-color: #fff;
 }
+nav p {
+  color: #2b2b2b;
+  font-size: 1.3em;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  line-height: 80px;
+  padding-left: 3%;
+}
 
 nav .header-nav-menu li {
   display: inline-block;
@@ -218,9 +232,9 @@ nav .header-nav-menu li {
 nav .header-nav-menu a {
   border: 0;
   color: #2b2b2b;
-  font-size: 1em;
+  font-size: 1.15em;
   font-variant: small-caps;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-decoration: none;
 }
 
@@ -229,23 +243,26 @@ nav .header-nav-menu a {
   max-width: 48em;
   margin: 0 auto;
   padding: 0 3%;
-  padding-bottom: 200px;
+  padding-bottom: 350px;
 }
 @media only screen and (min-width: 48.063em) {
   .site-content {
-    padding: 0 0 200px;
+    padding: 0 0 350px;
   }
 }
 
 .banner {
-  box-shadow: 0 1px 5px #f9f9f9;
-  -webkit-box-shadow: 0 1px 5px #f9f9f9;
-  -moz-box-shadow: 0 1px 5px #f9f9f9;
-  min-height: 150px;
+  box-shadow: 0 1px 5px #C7C7C7;
+  -webkit-box-shadow: 0 1px 5px #C7C7C7;
+  -moz-box-shadow: 0 1px 5px #C7C7C7;
+  height: 180px;
   margin: 0 -100%;
   padding: 0 100%;
   margin-bottom: 50px;
   background-color: #dae9f2;
+}
+.banner.logo {
+  margin-bottom: 150px;
 }
 
 .banner-content {
@@ -254,6 +271,10 @@ nav .header-nav-menu a {
   padding: 50px 0;
   color: #797878;
   text-align: center;
+}
+
+svg.logo {
+  transform: scale(1.4) translateY(13px);
 }
 
 footer {
@@ -269,7 +290,7 @@ footer {
 }
 footer a {
   border: 0;
-  color: #797878;
+  color: #C7C7C7;
   line-height: 1.5em;
   text-decoration: none;
 }

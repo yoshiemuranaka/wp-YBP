@@ -1,6 +1,8 @@
 html,
 body {
 	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -19,18 +21,22 @@ body {
 //  TYPE  ///////
 ////////////////
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 	font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
 	// letter-spacing: 0.015em;
 }
 
 h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
 
+  font-family: 'Garamond', serif;
   font-size: 2em;
+  font-variant: small-caps;
   font-weight: 500;
+  letter-spacing: 0.15em;
   line-height: 1.5em;
 }
+
 
 h2 {
   margin-bottom: 0.5em;

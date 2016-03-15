@@ -1,26 +1,31 @@
 .site-content {
   @include mq(medium) {
-    padding: 0 0 200px;
+    padding: 0 0 350px;
   }
 
   height: 100%;
   max-width: 48em;
   margin: 0 auto;
   padding: 0 3%;
-  padding-bottom: 200px //footer height
+  padding-bottom: 350px //footer height
 }
 
 
 .banner {
-  @include boxshadow($grey--light);
+  @include boxshadow($grey--medium);
 
-  min-height: 150px;
+  // min-height: 150px;
+  height: 180px;
   margin: 0 -100%; // for full bleed banner
   padding: 0 100%;
 
   margin-bottom: 50px;
 
   background-color: $light-blue;
+
+  &.logo {
+    margin-bottom: 150px;
+  }
 
 }
 
@@ -31,4 +36,8 @@
 
   color: $grey;
   text-align: center;
+}
+
+svg.logo{
+  transform: scale(1.4) translateY(13px);
 }

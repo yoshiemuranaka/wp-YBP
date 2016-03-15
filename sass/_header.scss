@@ -9,9 +9,23 @@ nav {
   width: 100%;
 
   background-color: $white;
+  p {
+    color: $default-font;
+    font-size: 1.3em;
+    font-variant: small-caps;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    line-height: 80px;
+    padding-left: 3%;
+  }
 }
 
+
 nav .header-nav-menu {
+	// ul {
+	// 	position: absolute;
+	// 	right: 0;
+	// }
   li {
     display: inline-block;
     padding: 0 3%;
@@ -22,9 +36,11 @@ nav .header-nav-menu {
     border: 0;
 
     color: $default-font;
-    font-size: 1em;
+    font-size: 1.15em;
     font-variant: small-caps;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-decoration: none;
   }
+
+
 }
