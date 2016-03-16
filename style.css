@@ -251,11 +251,11 @@ nav .header-nav-menu a:hover {
   max-width: 48em;
   margin: 0 auto;
   padding: 0 3%;
-  padding-bottom: 350px;
+  padding-bottom: 400px;
 }
 @media only screen and (min-width: 48.063em) {
   .site-content {
-    padding: 0 0 350px;
+    padding: 0 0 400px;
   }
 }
 
@@ -272,6 +272,9 @@ nav .header-nav-menu a:hover {
 .banner.logo {
   margin-bottom: 150px;
 }
+.banner svg.logo {
+  transform: scale(1.4) translateY(13px);
+}
 
 .banner-content {
   max-width: 40em;
@@ -279,10 +282,6 @@ nav .header-nav-menu a:hover {
   padding: 50px 0;
   color: #797878;
   text-align: center;
-}
-
-svg.logo {
-  transform: scale(1.4) translateY(13px);
 }
 
 footer {
@@ -319,4 +318,10 @@ footer .copyright {
 }
 footer .footer-menu {
   margin-top: 1em;
+}
+footer svg.logo-watermark {
+  position: relative;
+  height: 100%;
+  width: 150px;
+  margin-top: -96px;
 }
