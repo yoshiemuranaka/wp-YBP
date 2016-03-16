@@ -1,52 +1,4 @@
-<?php 
-
-/*
-adding footer menu, second nav to child theme
-*/
- register_nav_menus( array(
- 'primary' => __( 'Primary Menu', 'ybp' ),
- 'secondary' => __( 'Secondary Menu', 'ybp'),
- ) );
-
-/*
-removing admin bar
-*/
-add_action('get_header', 'remove_admin_login_header');
-function remove_admin_login_header() {
-	remove_action('wp_head', '_admin_bar_bump_cb');
-}
-
-/*
-removing autofilter that adds empty <p> tags 
-*/
-remove_filter('the_content', 'wpautop');
-
-
-
-/*
-adding shortcodes
-*/
-function banner_shortcode( $atts, $content = null ) {
-	return '<div class="banner"><div class="banner-content">' . $content . '</div></div>';
-}
-add_shortcode( 'banner', 'banner_shortcode' );
-
-
-function logo_test($atts, $content = null) {
-	$logo = file_get_contents('/images/header-logo.svg');
-	// $logo = get_template_part('/images/header', 'logo.svg');
-	$element = '<div class="banner"><div class="banner-content">';
-	$element .= $logo;
-	$element .= '</div></div>';
-	return $element;
-	// return '<div class="banner"><div class="banner-content">' .  $logo . '</div></div>';
-}
-
-add_shortcode( 'logo', 'logo_test' );
-
-
-function logo_shortcode( $atts, $content = null ) {
-	return '<div class="banner logo"><div class="banner-content"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="232.542px" height="166.167px" viewBox="0 0 232.542 166.167" enable-background="new 0 0 232.542 166.167"
 	 xml:space="preserve" class="logo">
 <pattern  x="90.875" y="103.5" width="72" height="72" patternUnits="userSpaceOnUse" id="BackgroundPattern1_2_" viewBox="72.25 -72 72 72" overflow="visible">
@@ -6774,8 +6726,3 @@ function logo_shortcode( $atts, $content = null ) {
 	c-0.304-0.756-0.778-1.42-1.433-1.994c-0.651-0.571-1.493-1.024-2.527-1.362c-1.035-0.336-2.311-0.502-3.831-0.502h-2.878
 	l0.757,11.998H205.885z"/>
 </svg>
- </div></div>';
-}
-// add_shortcode( 'logo', 'logo_shortcode' );
-
-

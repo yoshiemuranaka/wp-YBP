@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 {
-	margin-bottom: 0.5em;
+	margin: 2.5em 0 1em;
 
   font-size: 1.25em;
   font-weight: 600;
@@ -61,6 +61,7 @@ p {
 	font-size: 1.15em;
   letter-spacing: 0.02em;
   line-height: 1.65em;
+  margin-bottom: 1em;
 }
 
 
@@ -68,15 +69,20 @@ p {
 //  LINKS  //////
 ////////////////
 
-a {
-  border-bottom: 2px solid $default-link;
+a,
+.link-style {
+  border-bottom: 0.1em solid $default-link;
 
   color: $default-link;
   text-decoration: none;
+
+  cursor: pointer;
   &:hover {
     color: $hover;
+    border-bottom: 0.1em solid $hover;
   }
 }
+
 
 
 ///////////////////

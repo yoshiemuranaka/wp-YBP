@@ -6,8 +6,10 @@ $black: #000;
 $white: #fff;
 
 $grey--light: #f9f9f9;
-$grey--dark: #2b2b2b;
 $grey--medium: #C7C7C7;
+$grey--dark: #797878;
+$grey--darker: #2b2b2b;
+
 $grey: #797878;
 
 $light-blue: #dae9f2;
@@ -17,6 +19,7 @@ $orange--dark: #BF792D;
 $accent: $orange;
 $accent--darker: $orange--dark;
 
-$default-font: $grey--dark;
+$default-font: $grey--darker;
+$footer-font: $grey--dark;
 $default-link: $accent;
 $hover: $accent--darker;

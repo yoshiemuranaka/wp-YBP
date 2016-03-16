@@ -40,6 +40,10 @@ nav .header-nav-menu {
     font-variant: small-caps;
     letter-spacing: 0.15em;
     text-decoration: none;
+
+    &:hover {
+      color: $hover;
+    }
   }
 
 
