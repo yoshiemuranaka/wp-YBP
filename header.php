@@ -10,21 +10,21 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-
-			<div class="grid">
-				<div class="col one-third sm-two-thirds alpha">
-					<a href="http://localhost:8888/wp-YBP">
-					<p>Your Best Prep</p>
-					<!-- <img src="http://localhost:8888/wp-YBP/wp-content/uploads/2016/03/logo.png"> -->
-					</a>
-				</div>
-				<div class="col two-thirds sm-one-third omega">
-					<div class="hide-sm">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'header-nav-menu' ) ); ?>
-					</div>
-				</div>
+	<div class="js-animate-menu">
+		<div class="overlay">
+			<?php wp_nav_menu( array('container_class' => 'overlay-menu', 'menu_id' => 'secondary-menu', 'theme_location' => 'secondary' ) ); ?>
 			</div>
+	</div>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<div class="nav-content">
+			<div class="nav-logo"><p>Your Best Prep</p></div>
+			<div class="nav-menu">
+				<div class="menu burger show-sm"><a>&#9776;</a></div>
+				<div class="menu inline-list hide-sm">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'header-nav-menu' ) ); ?>
+				</div>		
+			</div>
+		</div>
 	</nav><!-- #site-navigation -->
 
 

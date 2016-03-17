@@ -11,14 +11,22 @@ footer {
   font-size: 0.85em;
   text-align: center;
   
-  a {
+  a,
+  a:visited {
     border: 0;
 
     color: $footer-font;
     line-height: 1.5em;
     text-decoration: none;
+    &:focus,
+    &:active,
+    &:hover {
+      color: $hover;
+      border-bottom: 0.1em solid $hover;
+    }
   }
   
+  .link-style:visited,
   .link-style {
     cursor: pointer;
     margin-bottom: 0.5em;
@@ -27,6 +35,9 @@ footer {
 
     color: $default-link;
     text-decoration: none;
+    
+    &:focus,
+    &:active,
     &:hover {
       color: $hover;
       border-bottom: 0.1em solid $hover;

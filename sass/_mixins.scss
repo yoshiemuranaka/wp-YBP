@@ -4,12 +4,12 @@
 
 @mixin mq($point) {
   @if $point == medium {
-    @media only screen and (min-width: 48.063em) {
+    @media only screen and (min-width: 769px) {
       @content;
     }
   }
   @else if $point == small-only {
-    @media only screen and (max-width: 48em) {
+    @media only screen and (max-width: 768px) {
       @content
     }
   }
@@ -97,3 +97,16 @@
   -webkit-box-shadow: 0 1px 5px $color;
   -moz-box-shadow: 0 1px 5px $color;
 }
+
+////////////////////
+//  TRANSITION  ///
+//////////////////
+
+@mixin transition($value, $speed, $ease) {
+  -moz-transition: $value $speed $ease;
+  -ms-transition: $value $speed $ease;
+  -webkit-transition: $value $speed $ease;
+  transition: $value $speed $ease;
+}
+
+

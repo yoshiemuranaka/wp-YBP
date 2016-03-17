@@ -5,32 +5,78 @@
 nav {
   @include boxshadow($grey--light);
 
+  position: relative;
   height: 80px;
   width: 100%;
+  margin: 0 auto;
+  z-index: 10;
 
   background-color: $white;
   p {
+    margin-bottom: 0;
+    padding-left: 3px;
+
     color: $default-font;
     font-size: 1.3em;
     font-variant: small-caps;
     letter-spacing: 0.15em;
-    text-decoration: none;
     line-height: 80px;
-    padding-left: 3%;
+    text-decoration: none;
+  }
+  .nav-content {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .nav-logo {
+    position: relative;
+    left: 10px;
+    float: left;
+
+    text-align: left;
+  }
+  .nav-menu {
+    @include mq(medium) {
+      width: 60%;
+    }
+
+    position: relative;
+    right: 10px;
+    float: right;
+    width: 25%;
+    min-width: auto;
+
+    text-align: right;
+  }
+  .menu.burger a {
+    font-size: 1.5em;
+    line-height: 80px;
+    color: $default-font;
+    text-decoration: none;
+    border: none;
+    &:hover {
+      color: $hover;
+    }
+    padding-right: 20px;
   }
 }
 
 
-nav .header-nav-menu {
-	// ul {
-	// 	position: absolute;
-	// 	right: 0;
-	// }
+
+
+.main-navigation .header-nav-menu {
+  width: 100%;
+  ul {
+    width: 100%;
+  }
   li {
+    float: none;
     display: inline-block;
-    padding: 0 3%;
+    padding: 0 15px;
 
     line-height: 80px;
+    &:last-child {
+      padding-right: 0;
+    }
   }
   a {
     border: 0;
@@ -46,5 +92,50 @@ nav .header-nav-menu {
     }
   }
 
+}
 
+.js-animate-menu {
+  &.active {
+    .overlay {
+      opacity: 1;
+    }
+  }
+  .overlay {
+    @include transition(all, 0.2s, ease);
+
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+
+    background: $white;
+
+    text-align: center;
+
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9;
+    overflow: auto;
+  }
+  .overlay-menu {
+    li {
+      padding: 1.5em 1em 1.5em 0;
+
+      border-bottom: 1px solid $grey--medium;
+
+      font-size: 1em;
+      font-variant: small-caps;
+      letter-spacing: 0.15em;
+      &:focus,
+      &:hover {
+        background-color: $grey--light;
+      }
+      a {
+        border: none;
+
+        color: $default-font;
+      }
+    }
+  }
 }

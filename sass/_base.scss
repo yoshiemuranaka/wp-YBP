@@ -6,7 +6,7 @@ body {
 }
 
 body {
-	background: $grey--light;
+	background: $body;
 	color: $default-font;
 	font-family: 'Garamond', serif;
 	font-size: 16px;
@@ -23,7 +23,6 @@ body {
 
 h2, h3, h4, h5, h6 {
 	font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
-	// letter-spacing: 0.015em;
 }
 
 h1 {
@@ -65,13 +64,15 @@ p {
 }
 
 a,
-.link-style {
+.link-style,
+.link-style:visited {
   border-bottom: 0.1em solid $default-link;
 
   color: $default-link;
   text-decoration: none;
 
   cursor: pointer;
+  &:active,
   &:hover {
     color: $hover;
     border-bottom: 0.1em solid $hover;
