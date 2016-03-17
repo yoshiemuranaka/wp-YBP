@@ -196,6 +196,74 @@ a:hover,
   border-bottom: 0.1em solid #BF792D;
 }
 
+figure {
+  margin: 0 auto;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  display: block;
+  margin: 25px 0;
+  padding: 10px 30px;
+  color: #fff;
+  border: 1px solid #d88832;
+  border-radius: 5px;
+  outline: none;
+  background-color: #d88832;
+  font-family: 'Garamond', serif;
+  font-size: 1em;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+button:hover,
+html input[type='button']:hover,
+input[type='reset']:hover,
+input[type='submit']:hover {
+  background-color: #BF792D;
+  border-color: #BF792D;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  border: 1px solid #C7C7C7;
+  border-radius: 3px;
+  outline: none;
+  display: block;
+  background-color: #fff;
+  font-family: 'Garamond', serif;
+  font-size: 1.15em;
+  line-height: 1.5em;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  padding: 5px 10px;
+  width: 80%;
+}
+
+label {
+  font-family: 'Garamond', serif;
+  letter-spacing: 0.02em;
+  line-height: 1.65em;
+  margin: 0.5em 0 1em;
+}
+
 @media only screen and (max-width: 48em) {
   .hide-sm {
     display: none;

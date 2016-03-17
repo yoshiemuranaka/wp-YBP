@@ -64,11 +64,6 @@ p {
   margin-bottom: 1em;
 }
 
-
-//////////////////
-//  LINKS  //////
-////////////////
-
 a,
 .link-style {
   border-bottom: 0.1em solid $default-link;
@@ -83,7 +78,90 @@ a,
   }
 }
 
+//////////////////
+//  MEDIA  //////
+////////////////
 
+figure {
+  margin: 0 auto;
+}
+
+//////////////////
+//  FORMS  //////
+////////////////
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  display: block;
+  margin: 25px 0;
+  padding: 10px 30px;
+  color: $white;
+
+  border: 1px solid $accent;
+  border-radius: 5px;
+  outline: none;
+
+  background-color: $accent;
+
+  font-family: 'Garamond', serif;
+  font-size: 1em;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+
+  cursor: pointer;
+
+  -webkit-appearance: button;
+
+  &:hover {
+    background-color: $hover;
+    
+    border-color: $hover;
+
+  }
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  border: 1px solid $grey--medium;
+  border-radius: 3px;
+  outline: none;
+
+  display: block;
+
+  background-color: $white;
+
+  font-family: 'Garamond', serif;
+  font-size: 1.15em;
+  line-height: 1.5em;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  padding: 5px 10px;
+  width: 80%;
+}
+
+label {
+  font-family: 'Garamond', serif;
+  letter-spacing: 0.02em;
+  line-height: 1.65em;
+  margin: 0.5em 0 1em;
+}
 
 ///////////////////
 //  UTILITIES  ///

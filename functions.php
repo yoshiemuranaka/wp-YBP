@@ -9,6 +9,19 @@ adding footer menu, second nav to child theme
  ) );
 
 /*
+editing password form
+*/
+
+function custom_password_form($content) {
+	$before = array('This content is password protected. To view it please enter your password below:','Password:','Submit');
+	$after = array('<h3>Enter Password</h3><p>Please enter the password to access content on this page</p>','Password:','Login');
+	$content = str_replace($before,$after,$content);
+	return $content;
+}
+add_filter('the_password_form', 'custom_password_form');
+
+
+/*
 removing admin bar
 */
 add_action('get_header', 'remove_admin_login_header');
