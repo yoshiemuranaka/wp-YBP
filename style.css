@@ -171,7 +171,7 @@ h2 {
 h3 {
   margin: 2.5em 0 1em;
   font-size: 1.25em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2em;
 }
 
@@ -237,7 +237,7 @@ nav .header-nav-menu li {
 nav .header-nav-menu a {
   border: 0;
   color: #2b2b2b;
-  font-size: 1.15em;
+  font-size: 1em;
   font-variant: small-caps;
   letter-spacing: 0.15em;
   text-decoration: none;
@@ -251,11 +251,11 @@ nav .header-nav-menu a:hover {
   max-width: 48em;
   margin: 0 auto;
   padding: 0 3%;
-  padding-bottom: 400px;
+  padding-bottom: 450px;
 }
 @media only screen and (min-width: 48.063em) {
   .site-content {
-    padding: 0 0 400px;
+    padding: 0 0 450px;
   }
 }
 

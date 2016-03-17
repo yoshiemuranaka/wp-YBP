@@ -1,13 +1,13 @@
 .site-content {
   @include mq(medium) {
-    padding: 0 0 400px;
+    padding: 0 0 450px;
   }
 
   height: 100%;
   max-width: 48em;
   margin: 0 auto;
   padding: 0 3%;
-  padding-bottom: 400px //footer height
+  padding-bottom: 450px //footer height
 }
 
 
