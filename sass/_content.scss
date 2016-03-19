@@ -9,6 +9,20 @@
   padding: 80px 3% 450px;
 }
 
+.csstransitions .site-content { //TRANSITION CONTENT
+  &.loaded {
+    h1, h2, h3, h4, h5, p, a, img, figure {
+      opacity: 1;
+    }
+  } 
+
+  h1, h2, h3, h4, h5, p, a, img, figure {
+    opacity: 0;
+    @include transition(opacity, 0.5s, ease-in-out)  
+
+  }
+}
+
 
 .banner {
   @include boxshadow($grey--medium);
@@ -30,6 +44,16 @@
   }
 
 }
+
+.svg .banner #vivus-header * {
+  fill-opacity: 0;
+  @include transition(fill-opacity, 1s, ease);
+}
+
+.svg .banner #vivus-header.finished * {
+  fill-opacity: 1
+}
+
 
 .banner-content {
   max-width: 40em;

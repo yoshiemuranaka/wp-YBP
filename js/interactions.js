@@ -3,9 +3,16 @@ var YBP = {};
 YBP.Interactions = {
 	init: function(){
 		this.events();
+		this.revealContent();
+		this.initVivus();
 	},
+	
 	events: function(){
 		jQuery('nav .menu.burger').bind('click', this.overlay);		
+	},
+
+	revealContent: function(){
+		jQuery('.site-content').addClass('loaded');
 	},
 
 	overlay: function(){
@@ -16,6 +23,13 @@ YBP.Interactions = {
 		}else {
 			menu.addClass('active');
 		}
+	},
+
+	initVivus: function() {
+	  new Vivus('vivus-header', {
+	    duration: 250,
+	    type: 'oneByOne'
+		}, function(obj){obj.el.classList.add('finished')});
 	}
 }
 

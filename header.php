@@ -17,7 +17,7 @@
 	</div>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="nav-content">
-			<div class="nav-logo"><p>Your Best Prep</p></div>
+			<div class="nav-logo"><p><a href="http://localhost:8888/wp-YBP/">Your Best Prep</a></p></div>
 			<div class="nav-menu">
 				<div class="menu burger show-sm"><a>&#9776;</a></div>
 				<div class="menu inline-list hide-sm">

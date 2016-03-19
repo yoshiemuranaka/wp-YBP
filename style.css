@@ -217,6 +217,14 @@ figure {
   margin: 0 auto;
 }
 
+figcaption {
+  margin: 2.5em 0 1em;
+  font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
 button,
 html input[type='button'],
 input[type='reset'],
@@ -311,8 +319,8 @@ nav {
   height: 80px;
   width: 100%;
   margin: 0 auto;
-  z-index: 10;
   background-color: #fff;
+  z-index: 10;
 }
 nav p {
   margin-bottom: 0;
@@ -334,6 +342,13 @@ nav .nav-logo {
   float: left;
   text-align: left;
 }
+nav .nav-logo a {
+  border: 0;
+  color: #2b2b2b;
+}
+nav .nav-logo a:hover, nav .nav-logo a:visited, nav .nav-logo a:focus, nav .nav-logo a:active {
+  color: #2b2b2b;
+}
 nav .nav-menu {
   position: relative;
   right: 10px;
@@ -348,12 +363,12 @@ nav .nav-menu {
   }
 }
 nav .menu.burger a {
+  padding-right: 20px;
+  border: none;
+  color: #2b2b2b;
   font-size: 1.5em;
   line-height: 80px;
-  color: #2b2b2b;
   text-decoration: none;
-  border: none;
-  padding-right: 20px;
 }
 nav .menu.burger a:hover {
   color: #BF792D;
@@ -366,8 +381,8 @@ nav .menu.burger a:hover {
   width: 100%;
 }
 .main-navigation .header-nav-menu li {
-  float: none;
   display: inline-block;
+  float: none;
   padding: 0 15px;
   line-height: 80px;
 }
@@ -391,8 +406,8 @@ nav .menu.burger a:hover {
   z-index: 9;
 }
 .js-animate-menu.active .overlay {
-  -webkit-animation: menuAnimation 0.3s ease-in;
-  animation: menuAnimation 0.3s ease-in;
+  -webkit-animation: menuAnimation 0.3s ease-in-out;
+  animation: menuAnimation 0.3s ease-in-out;
   display: block;
   opacity: 1;
 }
@@ -437,6 +452,17 @@ nav .menu.burger a:hover {
   }
 }
 
+.csstransitions .site-content.loaded h1, .csstransitions .site-content.loaded h2, .csstransitions .site-content.loaded h3, .csstransitions .site-content.loaded h4, .csstransitions .site-content.loaded h5, .csstransitions .site-content.loaded p, .csstransitions .site-content.loaded a, .csstransitions .site-content.loaded img, .csstransitions .site-content.loaded figure {
+  opacity: 1;
+}
+.csstransitions .site-content h1, .csstransitions .site-content h2, .csstransitions .site-content h3, .csstransitions .site-content h4, .csstransitions .site-content h5, .csstransitions .site-content p, .csstransitions .site-content a, .csstransitions .site-content img, .csstransitions .site-content figure {
+  opacity: 0;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .banner {
   box-shadow: 0 1px 5px #C7C7C7;
   -webkit-box-shadow: 0 1px 5px #C7C7C7;
@@ -452,6 +478,18 @@ nav .menu.burger a:hover {
 }
 .banner svg.logo {
   transform: scale(1.4) translateY(13px);
+}
+
+.svg .banner #vivus-header * {
+  fill-opacity: 0;
+  -moz-transition: fill-opacity 1s ease;
+  -ms-transition: fill-opacity 1s ease;
+  -webkit-transition: fill-opacity 1s ease;
+  transition: fill-opacity 1s ease;
+}
+
+.svg .banner #vivus-header.finished * {
+  fill-opacity: 1;
 }
 
 .banner-content {
