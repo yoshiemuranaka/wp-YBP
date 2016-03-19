@@ -109,4 +109,26 @@
   transition: $value $speed $ease;
 }
 
+@mixin animation($value, $speed, $ease) {
+  -webkit-animation: $value $speed $ease;
+  animation: $value $speed $ease;
+}
+
+////////////////////
+//  KEYFRAMES  ///
+//////////////////
+
+@keyframes menuAnimation {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 

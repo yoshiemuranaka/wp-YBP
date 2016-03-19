@@ -98,7 +98,6 @@ input[type='submit'] {
   display: block;
   margin: 25px 0;
   padding: 10px 30px;
-  color: $white;
 
   border: 1px solid $accent;
   border-radius: 5px;
@@ -106,20 +105,24 @@ input[type='submit'] {
 
   background-color: $accent;
 
+  color: $white;
   font-family: 'Garamond', serif;
   font-size: 1em;
   font-variant: small-caps;
   letter-spacing: 0.15em;
+  text-shadow: none;
 
+  box-shadow: none;
   cursor: pointer;
 
   -webkit-appearance: button;
-
+  &:active,
   &:hover {
-    background-color: $hover;
-    
     border-color: $hover;
 
+    background-color: $hover;
+    box-shadow: none;
+    text-shadow: none;
   }
 }
 

@@ -5,7 +5,17 @@ YBP.Interactions = {
 		this.events();
 	},
 	events: function(){
-		//initialize event listeners here
+		jQuery('nav .menu.burger').bind('click', this.overlay);		
+	},
+
+	overlay: function(){
+		var menu = jQuery('.js-animate-menu');
+
+		if(menu.hasClass('active')){
+			menu.removeClass('active');
+		}else {
+			menu.addClass('active');
+		}
 	}
 }
 

@@ -60,9 +60,6 @@ nav {
   }
 }
 
-
-
-
 .main-navigation .header-nav-menu {
   width: 100%;
   ul {
@@ -95,14 +92,19 @@ nav {
 }
 
 .js-animate-menu {
+  position: fixed;
+
+  z-index: 9;
   &.active {
     .overlay {
+      @include animation(menuAnimation, 0.3s, ease-in);
+
+      display: block;
+
       opacity: 1;
     }
   }
   .overlay {
-    @include transition(all, 0.2s, ease);
-
     display: none;
     position: fixed;
     height: 100%;
@@ -115,13 +117,10 @@ nav {
 
     cursor: pointer;
     opacity: 0;
-    z-index: 9;
     overflow: auto;
   }
   .overlay-menu {
     li {
-      padding: 1.5em 1em 1.5em 0;
-
       border-bottom: 1px solid $grey--medium;
 
       font-size: 1em;
@@ -132,6 +131,10 @@ nav {
         background-color: $grey--light;
       }
       a {
+        display: inline-block;
+        width: 100%;
+        padding: 1.5em;
+
         border: none;
 
         color: $default-font;
