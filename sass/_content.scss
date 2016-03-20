@@ -11,12 +11,12 @@
 
 .csstransitions .site-content { //TRANSITION CONTENT
   &.loaded {
-    h1, h2, h3, h4, h5, p, a, img, figure {
+    h1, h2, h3, h4, h5, p, a, img, figure, span {
       opacity: 1;
     }
   } 
 
-  h1, h2, h3, h4, h5, p, a, img, figure {
+  h1, h2, h3, h4, h5, p, a, img, figure, span {
     opacity: 0;
     @include transition(opacity, 0.5s, ease-in-out)  
 
@@ -55,6 +55,10 @@
 }
 
 
+.banner + figure {
+  margin-top: -30px;
+}
+
 .banner-content {
   max-width: 40em;
   margin: 0 auto;
@@ -62,4 +66,31 @@
 
   color: $grey;
   text-align: center;
+}
+
+//////////////////////
+//  TESTIMONIALS  ///
+////////////////////
+
+
+.testimonial-entry {
+  margin-bottom: 2.5em;
+  .testimonial-entry-content {
+    margin-bottom: 1em;
+
+    font-family: 'Garamond', serif;
+    letter-spacing: 0.02em;
+  }
+  .testimonial-entry-title a {
+    border: 0;
+
+    color: $default-font;
+    font-size: 1.15em;
+    font-style: italic;
+    line-height: 1.65em;
+
+    cursor: default;
+
+    pointer-events: none;
+  }
 }

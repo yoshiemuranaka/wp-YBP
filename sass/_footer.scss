@@ -12,7 +12,8 @@ footer {
   text-align: center;
   
   a,
-  a:visited {
+  a:visited,
+  a:link {
     border: 0;
 
     color: $footer-font;

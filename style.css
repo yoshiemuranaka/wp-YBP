@@ -197,6 +197,7 @@ p {
 }
 
 a,
+a:link,
 .link-style,
 .link-style:visited {
   border-bottom: 0.1em solid #d88832;
@@ -204,25 +205,38 @@ a,
   text-decoration: none;
   cursor: pointer;
 }
-a:active, a:hover,
+a:active, a:hover, a:focus,
+a:link:active,
+a:link:hover,
+a:link:focus,
 .link-style:active,
 .link-style:hover,
+.link-style:focus,
 .link-style:visited:active,
-.link-style:visited:hover {
+.link-style:visited:hover,
+.link-style:visited:focus {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
 }
 
-figure {
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.wp-cation {
   margin: 0 auto;
 }
 
-figcaption {
+.wp-caption-text {
   margin: 2.5em 0 1em;
   font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.25em;
   font-weight: 500;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
 button,
@@ -345,9 +359,12 @@ nav .nav-logo {
 nav .nav-logo a {
   border: 0;
   color: #2b2b2b;
+  outline: none;
 }
-nav .nav-logo a:hover, nav .nav-logo a:visited, nav .nav-logo a:focus, nav .nav-logo a:active {
+nav .nav-logo a:link, nav .nav-logo a:hover, nav .nav-logo a:visited, nav .nav-logo a:focus, nav .nav-logo a:active {
   color: #2b2b2b;
+  border: 0;
+  outline: none;
 }
 nav .nav-menu {
   position: relative;
@@ -383,7 +400,7 @@ nav .menu.burger a:hover {
 .main-navigation .header-nav-menu li {
   display: inline-block;
   float: none;
-  padding: 0 15px;
+  padding: 0 20px;
   line-height: 80px;
 }
 .main-navigation .header-nav-menu li:last-child {
@@ -452,10 +469,10 @@ nav .menu.burger a:hover {
   }
 }
 
-.csstransitions .site-content.loaded h1, .csstransitions .site-content.loaded h2, .csstransitions .site-content.loaded h3, .csstransitions .site-content.loaded h4, .csstransitions .site-content.loaded h5, .csstransitions .site-content.loaded p, .csstransitions .site-content.loaded a, .csstransitions .site-content.loaded img, .csstransitions .site-content.loaded figure {
+.csstransitions .site-content.loaded h1, .csstransitions .site-content.loaded h2, .csstransitions .site-content.loaded h3, .csstransitions .site-content.loaded h4, .csstransitions .site-content.loaded h5, .csstransitions .site-content.loaded p, .csstransitions .site-content.loaded a, .csstransitions .site-content.loaded img, .csstransitions .site-content.loaded figure, .csstransitions .site-content.loaded span {
   opacity: 1;
 }
-.csstransitions .site-content h1, .csstransitions .site-content h2, .csstransitions .site-content h3, .csstransitions .site-content h4, .csstransitions .site-content h5, .csstransitions .site-content p, .csstransitions .site-content a, .csstransitions .site-content img, .csstransitions .site-content figure {
+.csstransitions .site-content h1, .csstransitions .site-content h2, .csstransitions .site-content h3, .csstransitions .site-content h4, .csstransitions .site-content h5, .csstransitions .site-content p, .csstransitions .site-content a, .csstransitions .site-content img, .csstransitions .site-content figure, .csstransitions .site-content span {
   opacity: 0;
   -moz-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
@@ -492,12 +509,34 @@ nav .menu.burger a:hover {
   fill-opacity: 1;
 }
 
+.banner + figure {
+  margin-top: -30px;
+}
+
 .banner-content {
   max-width: 40em;
   margin: 0 auto;
   padding: 50px 0;
   color: #797878;
   text-align: center;
+}
+
+.testimonial-entry {
+  margin-bottom: 2.5em;
+}
+.testimonial-entry .testimonial-entry-content {
+  margin-bottom: 1em;
+  font-family: 'Garamond', serif;
+  letter-spacing: 0.02em;
+}
+.testimonial-entry .testimonial-entry-title a {
+  border: 0;
+  color: #2b2b2b;
+  font-size: 1.15em;
+  font-style: italic;
+  line-height: 1.65em;
+  cursor: default;
+  pointer-events: none;
 }
 
 footer {
@@ -512,7 +551,8 @@ footer {
   text-align: center;
 }
 footer a,
-footer a:visited {
+footer a:visited,
+footer a:link {
   border: 0;
   color: #797878;
   line-height: 1.5em;
@@ -521,7 +561,10 @@ footer a:visited {
 footer a:focus, footer a:active, footer a:hover,
 footer a:visited:focus,
 footer a:visited:active,
-footer a:visited:hover {
+footer a:visited:hover,
+footer a:link:focus,
+footer a:link:active,
+footer a:link:hover {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
 }

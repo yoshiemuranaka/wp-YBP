@@ -44,36 +44,6 @@ add_filter('the_password_form', 'custom_password_form');
 
 
 /*
-trying to customize image caption
-*/
-// add_filter('img_caption_shortcode', 'limg_caption', 10, 3 );
-// function limg_caption( $caption, $atts, $image ) {
-//    $caption = "<figure>$image <figcaption class=\"caption\">";
-//    //$caption .= '<pre>' . print_r( $atts, true ) . '</pre>';
-//    $title = "/*get title from somewhere*/";
-//    $description = "/*get description from somewhere*/";
-//    $caption .= "{$atts['caption']} $title $description";
-//    $caption .= '</figcaption></figure>';
-//    return $caption;
-// }
-
-
-// function wp_get_attachment( $attachment_id ) {
-
-// $attachment = get_post( $attachment_id );
-// echo array(
-//     'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
-//     'caption' => $attachment->post_excerpt,
-//     'description' => $attachment->post_content,
-//     'href' => get_permalink( $attachment->ID ),
-//     'src' => $attachment->guid,
-//     'title' => $attachment->post_title
-// );
-// }
-// echo $attachment_meta['caption'];
-
-
-/*
 removing admin bar
 */
 add_action('get_header', 'remove_admin_login_header');

@@ -38,11 +38,15 @@ nav {
       border: 0;
 
       color: $default-font;
+      outline: none;
+      &:link,
       &:hover,
       &:visited,
       &:focus,
       &:active {
         color: $default-font;
+        border: 0;
+        outline: none;
       }
     }
   }
@@ -83,7 +87,7 @@ nav {
   li {
     display: inline-block;
     float: none;
-    padding: 0 15px;
+    padding: 0 20px;
 
     line-height: 80px;
     &:last-child {
