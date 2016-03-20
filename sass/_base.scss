@@ -65,7 +65,9 @@ p {
 
 a,
 a:link,
+a:visited,
 .link-style,
+.link-style:link,
 .link-style:visited {
   border-bottom: 0.1em solid $default-link;
 

@@ -1,14 +1,14 @@
 /*
  Theme Name:   YBP Child
- Theme URI:    http://example.com/twenty-fifteen-child/
+ Theme URI:    http://example.com/your-best-prep/
  Description:  YBP Child Theme
- Author:       Yoshie
+ Author:       Yoshie Muranaka
  Author URI:   http://yourbestprep.com
  Template:     _s
  Version:      1.0.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         yourBestPrep, responsive-layout
+ Tags:         your-best-prep, responsive-layout
  Text Domain:  _s-child
 */
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600,700);
@@ -198,7 +198,9 @@ p {
 
 a,
 a:link,
+a:visited,
 .link-style,
+.link-style:link,
 .link-style:visited {
   border-bottom: 0.1em solid #d88832;
   color: #d88832;
@@ -209,9 +211,15 @@ a:active, a:hover, a:focus,
 a:link:active,
 a:link:hover,
 a:link:focus,
+a:visited:active,
+a:visited:hover,
+a:visited:focus,
 .link-style:active,
 .link-style:hover,
 .link-style:focus,
+.link-style:link:active,
+.link-style:link:hover,
+.link-style:link:focus,
 .link-style:visited:active,
 .link-style:visited:hover,
 .link-style:visited:focus {
@@ -487,14 +495,29 @@ nav .menu.burger a:hover {
   height: 190px;
   margin: 0 -100%;
   padding: 0 100%;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   background-color: #dae9f2;
 }
+@media only screen and (min-width: 769px) {
+  .banner {
+    margin-bottom: 80px;
+  }
+}
 .banner.logo {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+@media only screen and (min-width: 769px) {
+  .banner.logo {
+    margin-bottom: 150px;
+  }
 }
 .banner svg.logo {
-  transform: scale(1.4) translateY(13px);
+  transform: scale(1.2) translateY(13px);
+}
+@media only screen and (min-width: 769px) {
+  .banner svg.logo {
+    transform: scale(1.4) translateY(13px);
+  }
 }
 
 .svg .banner #vivus-header * {
@@ -524,6 +547,7 @@ nav .menu.burger a:hover {
 .testimonial-entry {
   margin-bottom: 2.5em;
 }
+.testimonial-entry p,
 .testimonial-entry .testimonial-entry-content {
   margin-bottom: 1em;
   font-family: 'Garamond', serif;

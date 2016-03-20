@@ -13,14 +13,24 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function load_vendor_javascript() {
 	wp_register_script('modernizr', get_stylesheet_directory_uri() . '/js/modernizr-custom.min.js');
   wp_register_script('interactions', get_stylesheet_directory_uri() . '/js/interactions.js', 'jquery', false );
-	wp_register_script('vivus', get_stylesheet_directory_uri() . '/js/vivus.js');
 	
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('interactions');
-	wp_enqueue_script('vivus');
 }
 add_action( 'wp_enqueue_scripts', 'load_vendor_javascript' );
+
+function load_vivus (){
+	if (is_front_page()){ //only load vivus if is front page
+		wp_register_script('vivus', get_stylesheet_directory_uri() . '/js/vivus.js');
+		wp_register_script('vivus-init', get_stylesheet_directory_uri() . '/js/vivus-init.js');
+	
+		wp_enqueue_script('vivus');
+		wp_enqueue_script('vivus-init');
+	}
+}
+add_action( 'wp_enqueue_scripts', 'load_vivus' );
+
 
 /*
 adding footer menu, second nav to child theme
@@ -55,7 +65,6 @@ function remove_admin_login_header() {
 removing autofilter that adds empty <p> tags 
 */
 remove_filter('the_content', 'wpautop');
-
 
 
 /*

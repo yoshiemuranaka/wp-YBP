@@ -26,21 +26,30 @@
 
 .banner {
   @include boxshadow($grey--medium);
+  @include mq(medium) {
+    margin-bottom: 80px;
+  }
 
   height: 190px;
   margin: 0 -100%; // for full bleed banner
   padding: 0 100%;
 
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 
   background-color: $light-blue;
 
   &.logo {
-    margin-bottom: 150px;
+    @include mq(medium) {
+      margin-bottom: 150px;
+    }
+    margin-bottom: 100px;
   }
 
   svg.logo{
-    transform: scale(1.4) translateY(13px);
+    @include mq(medium) {
+      transform: scale(1.4) translateY(13px);
+    }
+    transform: scale(1.2) translateY(13px);
   }
 
 }
@@ -75,6 +84,7 @@
 
 .testimonial-entry {
   margin-bottom: 2.5em;
+  p,
   .testimonial-entry-content {
     margin-bottom: 1em;
 
