@@ -562,10 +562,14 @@ nav .menu.burger a:hover {
   cursor: default;
   pointer-events: none;
 }
-.testimonial-entry .testimonial-featured-image a {
-  border: 0;
+.testimonial-entry .testimonial-featured-image {
+  border: none;
   cursor: default;
   pointer-events: none;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 footer {

@@ -104,9 +104,13 @@
     pointer-events: none;
   }
 
-  .testimonial-featured-image a {
-    border: 0;
+  .testimonial-featured-image {
+    border: none;
     cursor: default;
     pointer-events: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
   }
 }
