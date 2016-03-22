@@ -32,7 +32,7 @@
     margin-bottom: 80px;
   }
 
-  height: 130px;
+  height: 100%;
   margin: 0 -100%; // for full bleed banner
   margin-bottom: 50px;
   padding: 0 100%;
@@ -40,15 +40,17 @@
   background-color: $light-blue;
   &.logo {
     @include mq(medium) {
-      margin-bottom: 160px;
+      margin-bottom: 180px;
     }
-    margin-bottom: 110px;
+    margin-bottom: 130px;
   }
   svg.logo {
     @include mq(medium) {
       transform: scale(1.4) translateY(13px);
+      // width: auto;
     }
-
+    // width: 100%;
+    // padding: 0 3%;
     transform: scale(1.2) translateY(13px);
   }
 }
@@ -90,14 +92,23 @@
     letter-spacing: 0;
     line-height: 1.25em;
   }
+  padding: 30px 0;
+}
+
+.banner.logo {
+  height: 150px;
 }
 
 .banner.logo .banner-content {
   @include mq(medium) {
     padding: 60px 0 0;
   }
-
+  height: 100%;
   padding: 35px 0 0;
+}
+
+.no-flexbox .banner {
+  padding-top: 35px;
 }
 
 

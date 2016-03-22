@@ -415,9 +415,9 @@ nav.main-navigation .menu.burger a:hover {
 .main-navigation .header-nav-menu a {
   border: 0;
   color: #2b2b2b;
-  font-size: 1em;
+  font-size: 1.15em;
   font-variant: small-caps;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-decoration: none;
 }
 .main-navigation .header-nav-menu a:hover {
@@ -449,9 +449,9 @@ nav.main-navigation .menu.burger a:hover {
 }
 .js-animate-menu .overlay-menu li {
   border-bottom: 1px solid #C7C7C7;
-  font-size: 1em;
+  font-size: 1.15em;
   font-variant: small-caps;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 .js-animate-menu .overlay-menu li:focus, .js-animate-menu .overlay-menu li:hover {
   background-color: #f9f9f9;
@@ -506,7 +506,7 @@ nav.main-navigation .menu.burger a:hover {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  height: 130px;
+  height: 100%;
   margin: 0 -100%;
   margin-bottom: 50px;
   padding: 0 100%;
@@ -519,11 +519,11 @@ nav.main-navigation .menu.burger a:hover {
   }
 }
 .banner.logo {
-  margin-bottom: 110px;
+  margin-bottom: 130px;
 }
 @media only screen and (min-width: 769px) {
   .banner.logo {
-    margin-bottom: 160px;
+    margin-bottom: 180px;
   }
 }
 .banner svg.logo {
@@ -564,6 +564,7 @@ nav.main-navigation .menu.burger a:hover {
   font-variant: normal;
   line-height: 1.25em;
   text-align: center;
+  padding: 30px 0;
 }
 .banner-content h1 {
   color: #797878;
@@ -575,13 +576,22 @@ nav.main-navigation .menu.burger a:hover {
   line-height: 1.25em;
 }
 
+.banner.logo {
+  height: 150px;
+}
+
 .banner.logo .banner-content {
+  height: 100%;
   padding: 35px 0 0;
 }
 @media only screen and (min-width: 769px) {
   .banner.logo .banner-content {
     padding: 60px 0 0;
   }
+}
+
+.no-flexbox .banner {
+  padding-top: 35px;
 }
 
 .testimonial-entry {

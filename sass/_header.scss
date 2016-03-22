@@ -101,9 +101,9 @@ nav.main-navigation {
     border: 0;
 
     color: $default-font;
-    font-size: 1em;
+    font-size: 1.15em;
     font-variant: small-caps;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-decoration: none;
     &:hover {
       color: $hover;
@@ -146,9 +146,9 @@ nav.main-navigation {
     li {
       border-bottom: 1px solid $grey--medium;
 
-      font-size: 1em;
+      font-size: 1.15em;
       font-variant: small-caps;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.1em;
       &:focus,
       &:hover {
         background-color: $grey--light;
