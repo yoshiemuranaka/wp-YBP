@@ -1,7 +1,7 @@
 
 		</div><!-- #content -->
 
-		<footer class="footer">
+		<footer class="footer site-footer">
   
 			<?php get_template_part('/images/footer', 'logo.svg'); ?>
 

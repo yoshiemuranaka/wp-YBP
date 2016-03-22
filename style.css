@@ -1,15 +1,10 @@
 /*
  Theme Name:   YBP Child
- Theme URI:    http://example.com/your-best-prep/
- Description:  YBP Child Theme
+ Theme URI:    http://yourbestprep.com
+ Description:  Child Theme for _s
  Author:       Yoshie Muranaka
- Author URI:   http://yourbestprep.com
  Template:     _s
  Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         your-best-prep, responsive-layout
- Text Domain:  _s-child
 */
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600,700);
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -426,15 +421,16 @@ nav .menu.burger a:hover {
   color: #BF792D;
 }
 
-.js-animate-menu {
-  position: fixed;
-  z-index: 9;
-}
-.js-animate-menu.active .overlay {
+.cssanimations .js-animate-menu.active .overlay {
   -webkit-animation: menuAnimation 0.3s ease-in-out;
   animation: menuAnimation 0.3s ease-in-out;
   display: block;
   opacity: 1;
+}
+
+.js-animate-menu {
+  position: fixed;
+  z-index: 9;
 }
 .js-animate-menu .overlay {
   display: none;
@@ -532,6 +528,10 @@ nav .menu.burger a:hover {
   fill-opacity: 1;
 }
 
+.no-svg .banner #vivus-header img {
+  display: block;
+}
+
 .banner + figure {
   margin-top: -30px;
 }
@@ -572,7 +572,7 @@ nav .menu.burger a:hover {
   width: 100%;
 }
 
-footer {
+footer.site-footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -583,47 +583,47 @@ footer {
   font-size: 0.85em;
   text-align: center;
 }
-footer a,
-footer a:visited,
-footer a:link {
+footer.site-footer a,
+footer.site-footer a:visited,
+footer.site-footer a:link {
   border: 0;
   color: #797878;
   line-height: 1.5em;
   text-decoration: none;
 }
-footer a:focus, footer a:active, footer a:hover,
-footer a:visited:focus,
-footer a:visited:active,
-footer a:visited:hover,
-footer a:link:focus,
-footer a:link:active,
-footer a:link:hover {
+footer.site-footer a:focus, footer.site-footer a:active, footer.site-footer a:hover,
+footer.site-footer a:visited:focus,
+footer.site-footer a:visited:active,
+footer.site-footer a:visited:hover,
+footer.site-footer a:link:focus,
+footer.site-footer a:link:active,
+footer.site-footer a:link:hover {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
 }
-footer .link-style:visited,
-footer .link-style {
+footer.site-footer .link-style:visited,
+footer.site-footer .link-style {
   cursor: pointer;
   margin-bottom: 0.5em;
   border-bottom: 0.1em solid #d88832;
   color: #d88832;
   text-decoration: none;
 }
-footer .link-style:visited:focus, footer .link-style:visited:active, footer .link-style:visited:hover,
-footer .link-style:focus,
-footer .link-style:active,
-footer .link-style:hover {
+footer.site-footer .link-style:visited:focus, footer.site-footer .link-style:visited:active, footer.site-footer .link-style:visited:hover,
+footer.site-footer .link-style:focus,
+footer.site-footer .link-style:active,
+footer.site-footer .link-style:hover {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
 }
-footer .copyright {
+footer.site-footer .copyright {
   color: #797878;
   font-size: 0.75em;
 }
-footer .footer-menu {
+footer.site-footer .footer-menu {
   margin-top: 1em;
 }
-footer svg.logo-watermark {
+footer.site-footer svg.logo-watermark {
   position: relative;
   height: 100%;
   width: 150px;

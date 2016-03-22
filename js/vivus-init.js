@@ -7,9 +7,8 @@ YBP.Vivus = {
 	    type: 'oneByOne'
 		}, function(obj){obj.el.classList.add('finished')});
 	}
-}
+};
 
 jQuery(document).ready(function($){
 	YBP.Vivus.init();
-	console.log('vivius init')
-})
+});

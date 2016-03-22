@@ -108,11 +108,7 @@ nav {
   }
 }
 
-
-.js-animate-menu {
-  position: fixed;
-
-  z-index: 9;
+.cssanimations .js-animate-menu {
   &.active {
     .overlay {
       @include animation(menuAnimation, 0.3s, ease-in-out);
@@ -122,6 +118,12 @@ nav {
       opacity: 1;
     }
   }
+}
+
+.js-animate-menu {
+  position: fixed;
+
+  z-index: 9;
   .overlay {
     display: none;
     position: fixed;
@@ -160,4 +162,5 @@ nav {
     }
   }
 }
+
 

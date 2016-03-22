@@ -11,17 +11,30 @@ YBP.Interactions = {
 	},
 
 	revealContent: function(){
-		jQuery('.site-content').addClass('loaded');
+		if(Modernizr.csstransitions){
+			jQuery('.site-content').addClass('loaded');
+		}
 	},
 
 	overlay: function(){
 		var menu = jQuery('.js-animate-menu');
-
-		if(menu.hasClass('active')){
-			menu.removeClass('active');
+		if(!Modernizr.cssanimations) {
+			if(menu.hasClass('active')){
+				menu.css({'display': 'none'}, function(){
+					menu.removeClass('active');
+				});
+			}else {
+				menu.css({'display': 'block'}, function(){
+					menu.addClass('active');
+				});
+			}
 		}else {
-			menu.addClass('active');
-		}
+			if(menu.hasClass('active')){
+				menu.removeClass('active');
+			}else {
+				menu.addClass('active');
+			}
+		}	
 	}
 }
 
