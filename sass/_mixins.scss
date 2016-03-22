@@ -132,3 +132,28 @@
   }
 }
 
+
+//////////////////
+//  FLEXBOX  ////
+////////////////
+
+@mixin flexbox($direction, $justify)
+{
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    -o-flex-direction: $direction;
+    flex-direction: $direction;
+    
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    -o-justify-content: $justify;
+    justify-content: $justify;
+}

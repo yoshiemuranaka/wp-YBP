@@ -26,33 +26,33 @@
 
 .banner {
   @include boxshadow($grey--medium);
+  @include flexbox(column, center);
   @include mq(medium) {
+    height: 150px;
     margin-bottom: 80px;
   }
 
-  height: 190px;
+  height: 130px;
   margin: 0 -100%; // for full bleed banner
+  margin-bottom: 50px;
   padding: 0 100%;
 
-  margin-bottom: 50px;
-
   background-color: $light-blue;
-
   &.logo {
     @include mq(medium) {
-      margin-bottom: 150px;
+      margin-bottom: 160px;
     }
-    margin-bottom: 100px;
+    margin-bottom: 110px;
   }
-
-  svg.logo{
+  svg.logo {
     @include mq(medium) {
       transform: scale(1.4) translateY(13px);
     }
+
     transform: scale(1.2) translateY(13px);
   }
-
 }
+
 
 .svg .banner #vivus-header * {
   fill-opacity: 0;
@@ -74,11 +74,33 @@
 .banner-content {
   max-width: 40em;
   margin: 0 auto;
-  padding: 50px 0;
 
-  color: $grey;
+  color: $grey--dark;
+  font-family: 'Dosis';
+  font-size: 40px;
+  font-variant: normal;
+  line-height: 1.25em;
   text-align: center;
+  h1 {
+    color: $grey--dark;
+    font-family: 'Dosis';
+    font-size: 40px;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 1.25em;
+  }
 }
+
+.banner.logo .banner-content {
+  @include mq(medium) {
+    padding: 60px 0 0;
+  }
+
+  padding: 35px 0 0;
+}
+
+
 
 //////////////////////
 //  TESTIMONIALS  ///
@@ -91,7 +113,7 @@
   .testimonial-entry-content {
     margin-bottom: 1em;
 
-    font-family: 'Garamond', serif;
+    font-family: 'Times New Roman', serif;
     letter-spacing: 0.02em;
   }
   .testimonial-entry-title a {

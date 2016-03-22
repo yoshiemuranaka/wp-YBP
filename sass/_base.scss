@@ -8,7 +8,7 @@ body {
 body {
 	background: $body;
 	color: $default-font;
-	font-family: 'Garamond', serif;
+	font-family: 'Times New Roman', serif;
 	font-size: 16px;
 }
 
@@ -28,7 +28,7 @@ h2, h3, h4, h5, h6 {
 h1 {
   margin-bottom: 0.25em;
 
-  font-family: 'Garamond', serif;
+  font-family: 'Times New Roman', serif;
   font-size: 2em;
   font-variant: small-caps;
   font-weight: 500;
@@ -56,7 +56,7 @@ h3 {
 
 
 p {
-	font-family: 'Garamond', serif;
+	font-family: 'Times New Roman', serif;
 	font-size: 1.15em;
   letter-spacing: 0.02em;
   line-height: 1.65em;
@@ -127,7 +127,7 @@ input[type='submit'] {
   background-color: $accent;
 
   color: $white;
-  font-family: 'Garamond', serif;
+  font-family: 'Times New Roman', serif;
   font-size: 1em;
   font-variant: small-caps;
   letter-spacing: 0.15em;
@@ -172,7 +172,7 @@ textarea {
 
   background-color: $white;
 
-  font-family: 'Garamond', serif;
+  font-family: 'Times New Roman', serif;
   font-size: 1.15em;
   line-height: 1.5em;
   font-variant: small-caps;
@@ -182,7 +182,7 @@ textarea {
 }
 
 label {
-  font-family: 'Garamond', serif;
+  font-family: 'Times New Roman', serif;
   letter-spacing: 0.02em;
   line-height: 1.65em;
   margin: 0.5em 0 1em;

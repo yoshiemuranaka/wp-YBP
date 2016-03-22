@@ -14,6 +14,7 @@ footer.site-footer {
   a,
   a:visited,
   a:link {
+    text-transform: capitalize;
     border: 0;
 
     color: $footer-font;
@@ -28,6 +29,7 @@ footer.site-footer {
   }
   
   .link-style:visited,
+  .link-style:link,
   .link-style {
     cursor: pointer;
     margin-bottom: 0.5em;
