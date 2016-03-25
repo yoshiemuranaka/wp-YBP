@@ -20,7 +20,7 @@
 			<div class="nav-logo"><p><a href="http://localhost:8888/wp-YBP/">Your Best Prep</a></p></div>
 			<div class="nav-menu">
 				<div class="menu-trigger show-sm">
-					<a class="menu-icon hamburger">&#9776;</a>
+					<a class="menu-icon hamburger active">&#9776;</a>
 					<img class="menu-icon close" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon--close.svg">
 				</div>
 				<div class="menu inline-list hide-sm">

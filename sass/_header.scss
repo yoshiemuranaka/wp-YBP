@@ -63,18 +63,31 @@ nav.main-navigation {
 
     text-align: right;
   }
-  .menu-trigger a {
+  .menu-trigger {
     padding-right: 20px;
 
-    border: none;
-
-    color: $default-font;
-    font-size: 1.5em;
-    line-height: 80px;
-    text-decoration: none;
-    &:hover {
-      color: $hover;
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      &.active {
+        display: block;
+      }
     }
+
+    .menu-icon.hamburger {
+      border: none;
+
+      color: $default-font;
+      font-size: 1.5em;
+      line-height: 80px;
+      text-decoration: none;
+    }
+
+    .menu-icon.close {
+      float: right;
+      padding-top: 30px;
+    }
+
   }
 }
 

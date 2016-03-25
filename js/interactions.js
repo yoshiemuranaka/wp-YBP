@@ -31,8 +31,10 @@ YBP.Interactions = {
 		}else {
 			if(menu.hasClass('active')){
 				menu.removeClass('active');
+				jQuery('.menu-icon').toggleClass('active');
 			}else {
 				menu.addClass('active');
+				jQuery('.menu-icon').toggleClass('active');
 			}
 		}	
 	}
