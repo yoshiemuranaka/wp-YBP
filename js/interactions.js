@@ -7,7 +7,7 @@ YBP.Interactions = {
 	},
 	
 	events: function(){
-		jQuery('nav .menu.burger').bind('click', this.overlay);		
+		jQuery('nav .menu-icon').bind('click', this.overlay);		
 	},
 
 	revealContent: function(){

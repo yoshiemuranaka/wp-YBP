@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
 	<?php wp_head(); ?>
 </head>
 
@@ -19,7 +19,10 @@
 		<div class="nav-content">
 			<div class="nav-logo"><p><a href="http://localhost:8888/wp-YBP/">Your Best Prep</a></p></div>
 			<div class="nav-menu">
-				<div class="menu burger show-sm"><a>&#9776;</a></div>
+				<div class="menu-trigger show-sm">
+					<a class="menu-icon hamburger">&#9776;</a>
+					<img class="menu-icon close" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon--close.svg">
+				</div>
 				<div class="menu inline-list hide-sm">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'header-nav-menu' ) ); ?>
 				</div>		

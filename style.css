@@ -382,7 +382,7 @@ nav.main-navigation .nav-menu {
     width: 60%;
   }
 }
-nav.main-navigation .menu.burger a {
+nav.main-navigation .menu-trigger a {
   padding-right: 20px;
   border: none;
   color: #3A3A3A;
@@ -390,7 +390,7 @@ nav.main-navigation .menu.burger a {
   line-height: 80px;
   text-decoration: none;
 }
-nav.main-navigation .menu.burger a:hover {
+nav.main-navigation .menu-trigger a:hover {
   color: #BF792D;
 }
 
