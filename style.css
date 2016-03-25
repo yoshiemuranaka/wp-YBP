@@ -506,6 +506,7 @@ nav.main-navigation .menu.burger a:hover {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
+  min-height: 150px;
   height: 100%;
   margin: 0 -100%;
   margin-bottom: 50px;
@@ -514,7 +515,6 @@ nav.main-navigation .menu.burger a:hover {
 }
 @media only screen and (min-width: 769px) {
   .banner {
-    height: 150px;
     margin-bottom: 80px;
   }
 }

@@ -28,10 +28,10 @@
   @include boxshadow($grey--medium);
   @include flexbox(column, center);
   @include mq(medium) {
-    height: 150px;
     margin-bottom: 80px;
   }
 
+  min-height: 150px;
   height: 100%;
   margin: 0 -100%; // for full bleed banner
   margin-bottom: 50px;
