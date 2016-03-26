@@ -516,12 +516,14 @@ label {
   margin-bottom: 1em;
 }
 
-.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6 {
+.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6, .site-main a {
   margin: 2.5em 0 1em;
   font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2em;
+  font-variant: normal;
+  letter-spacing: normal;
 }
 
 .banner {

@@ -38,8 +38,19 @@ YBP.Interactions = {
 			}
 		}	
 	}
-}
+};
+
+YBP.PageFilter = {
+	init: function(){
+		//removing empty p tags and br in page content
+		jQuery('.site-main p:empty').remove();
+		jQuery('.site-main > br').remove();
+		jQuery('.site-main .banner br').remove();
+	}
+};
 
 jQuery(document).ready(function($){
 	YBP.Interactions.init();
-})
+	YBP.PageFilter.init();
+});
+
