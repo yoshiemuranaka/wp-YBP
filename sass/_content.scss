@@ -9,20 +9,40 @@
   padding: 80px 3% 450px;
 }
 
-.csstransitions .site-content { //TRANSITION CONTENT
+.csstransitions .site-main { //TRANSITION CONTENT
   &.loaded {
-    h1, h2, h3, h4, h5, p, a, img, figure, span {
+    h1, h2, h3, h4, h5, h6, p, a, img, div:not(.banner), figure, span {
       opacity: 1;
     }
   } 
 
-  h1, h2, h3, h4, h5, p, a, img, figure, span {
+  h1, h2, h3, h4, h5, h6, p, a, img, div:not(.banner), figure, span {
     opacity: 0;
     @include transition(opacity, 0.5s, ease-in-out)  
 
   }
 }
 
+.site-main,
+.site-main p {
+  font-family: $serif;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.65em;
+  margin-bottom: 1em;
+}
+
+.site-main {
+  h1,h2,h3,h4,h5,h6 {
+    margin: 2.5em 0 1em;
+
+    font-family: $sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+
+}
 
 .banner {
   @include boxshadow($grey--medium);
@@ -47,10 +67,7 @@
   svg.logo {
     @include mq(medium) {
       transform: scale(1.4) translateY(13px);
-      // width: auto;
     }
-    // width: 100%;
-    // padding: 0 3%;
     transform: scale(1.2) translateY(13px);
   }
 }
@@ -78,21 +95,25 @@
   margin: 0 auto;
 
   color: $grey--dark;
-  font-family: 'Dosis';
+  font-family: $sans-serif;
   font-size: 40px;
   font-variant: normal;
   line-height: 1.25em;
   text-align: center;
   h1 {
     color: $grey--dark;
-    font-family: 'Dosis';
+    font-family: $sans-serif;
     font-size: 40px;
     font-variant: normal;
     font-weight: normal;
     letter-spacing: 0;
     line-height: 1.25em;
+    margin: 0 !important;
   }
-  padding: 30px 0;
+  padding: 30px 5%;
+  @include mq(medium) {
+    padding: 30px 0;
+  }
 }
 
 .banner.logo {
@@ -122,16 +143,16 @@
   margin-bottom: 2.5em;
   p,
   .testimonial-entry-content {
-    margin-bottom: 1em;
+    margin-bottom: 20px;
 
-    font-family: 'Times New Roman', serif;
+    font-family: $serif;
     letter-spacing: 0.02em;
   }
   .testimonial-entry-title a {
     border: 0;
 
     color: $default-font;
-    font-size: 1.15em;
+    font-size: 20px;
     font-style: italic;
     line-height: 1.65em;
 

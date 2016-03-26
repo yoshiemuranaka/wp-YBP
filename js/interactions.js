@@ -12,7 +12,7 @@ YBP.Interactions = {
 
 	revealContent: function(){
 		if(Modernizr.csstransitions){
-			jQuery('.site-content').addClass('loaded');
+			jQuery('.site-main').addClass('loaded');
 		}
 	},
 

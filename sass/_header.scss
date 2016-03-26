@@ -2,10 +2,17 @@
 //  NAV MENU  ///
 ////////////////
 
-nav.main-navigation {
+.main-navigation {
+  position: fixed;
+  top: 0;
+  @include mq(medium) {
+    position: relative;
+  }
+}
+
+.main-navigation {
   @include boxshadow($grey--light);
 
-  position: relative;
   height: 80px;
   width: 100%;
   margin: 0 auto;
@@ -79,7 +86,6 @@ nav.main-navigation {
 
       color: $default-font;
       font-size: 1.5em;
-      // line-height: 80px;
       text-decoration: none;
       float: right;
       padding-top: 30px;
@@ -87,7 +93,7 @@ nav.main-navigation {
 
     .menu-icon.close {
       float: right;
-      padding-top: 30px;
+      padding-top: 33px;
     }
 
   }

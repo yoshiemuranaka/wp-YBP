@@ -146,7 +146,7 @@ body {
 body {
   background: #f9f9f9;
   color: #3A3A3A;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;
 }
 
@@ -156,12 +156,12 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
 }
 
 h1 {
   margin-bottom: 0.25em;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 2em;
   font-variant: small-caps;
   font-weight: 500;
@@ -184,7 +184,7 @@ h3 {
 }
 
 p {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.15em;
   letter-spacing: 0.02em;
   line-height: 1.65em;
@@ -236,8 +236,8 @@ em {
 
 .wp-caption-text {
   margin: 2.5em 0 1em;
-  font-family: 'Dosis', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.25em;
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.5em;
 }
@@ -254,7 +254,7 @@ input[type='submit'] {
   outline: none;
   background-color: #d88832;
   color: #fff;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1em;
   font-variant: small-caps;
   letter-spacing: 0.15em;
@@ -297,7 +297,7 @@ textarea {
   outline: none;
   display: block;
   background-color: #fff;
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.15em;
   line-height: 1.5em;
   font-variant: small-caps;
@@ -307,7 +307,7 @@ textarea {
 }
 
 label {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", Times, serif;
   letter-spacing: 0.02em;
   line-height: 1.65em;
   margin: 0.5em 0 1em;
@@ -328,18 +328,27 @@ label {
   }
 }
 
-nav.main-navigation {
+.main-navigation {
+  position: fixed;
+  top: 0;
+}
+@media only screen and (min-width: 769px) {
+  .main-navigation {
+    position: relative;
+  }
+}
+
+.main-navigation {
   box-shadow: 0 1px 5px #f9f9f9;
   -webkit-box-shadow: 0 1px 5px #f9f9f9;
   -moz-box-shadow: 0 1px 5px #f9f9f9;
-  position: relative;
   height: 80px;
   width: 100%;
   margin: 0 auto;
   background-color: #fff;
   z-index: 10;
 }
-nav.main-navigation p {
+.main-navigation p {
   margin-bottom: 0;
   padding-left: 3px;
   color: #3A3A3A;
@@ -349,27 +358,27 @@ nav.main-navigation p {
   line-height: 80px;
   text-decoration: none;
 }
-nav.main-navigation .nav-content {
+.main-navigation .nav-content {
   max-width: 1600px;
   margin: 0 auto;
 }
-nav.main-navigation .nav-logo {
+.main-navigation .nav-logo {
   position: relative;
   left: 10px;
   float: left;
   text-align: left;
 }
-nav.main-navigation .nav-logo a {
+.main-navigation .nav-logo a {
   border: 0;
   color: #3A3A3A;
   outline: none;
 }
-nav.main-navigation .nav-logo a:link, nav.main-navigation .nav-logo a:hover, nav.main-navigation .nav-logo a:visited, nav.main-navigation .nav-logo a:focus, nav.main-navigation .nav-logo a:active {
+.main-navigation .nav-logo a:link, .main-navigation .nav-logo a:hover, .main-navigation .nav-logo a:visited, .main-navigation .nav-logo a:focus, .main-navigation .nav-logo a:active {
   color: #3A3A3A;
   border: 0;
   outline: none;
 }
-nav.main-navigation .nav-menu {
+.main-navigation .nav-menu {
   position: relative;
   right: 10px;
   float: right;
@@ -378,21 +387,21 @@ nav.main-navigation .nav-menu {
   text-align: right;
 }
 @media only screen and (min-width: 769px) {
-  nav.main-navigation .nav-menu {
+  .main-navigation .nav-menu {
     width: 60%;
   }
 }
-nav.main-navigation .menu-trigger {
+.main-navigation .menu-trigger {
   padding-right: 20px;
 }
-nav.main-navigation .menu-trigger .menu-icon {
+.main-navigation .menu-trigger .menu-icon {
   display: none;
   cursor: pointer;
 }
-nav.main-navigation .menu-trigger .menu-icon.active {
+.main-navigation .menu-trigger .menu-icon.active {
   display: block;
 }
-nav.main-navigation .menu-trigger .menu-icon.hamburger {
+.main-navigation .menu-trigger .menu-icon.hamburger {
   border: none;
   color: #3A3A3A;
   font-size: 1.5em;
@@ -400,9 +409,9 @@ nav.main-navigation .menu-trigger .menu-icon.hamburger {
   float: right;
   padding-top: 30px;
 }
-nav.main-navigation .menu-trigger .menu-icon.close {
+.main-navigation .menu-trigger .menu-icon.close {
   float: right;
-  padding-top: 30px;
+  padding-top: 33px;
 }
 
 .main-navigation .header-nav-menu {
@@ -487,15 +496,32 @@ nav.main-navigation .menu-trigger .menu-icon.close {
   }
 }
 
-.csstransitions .site-content.loaded h1, .csstransitions .site-content.loaded h2, .csstransitions .site-content.loaded h3, .csstransitions .site-content.loaded h4, .csstransitions .site-content.loaded h5, .csstransitions .site-content.loaded p, .csstransitions .site-content.loaded a, .csstransitions .site-content.loaded img, .csstransitions .site-content.loaded figure, .csstransitions .site-content.loaded span {
+.csstransitions .site-main.loaded h1, .csstransitions .site-main.loaded h2, .csstransitions .site-main.loaded h3, .csstransitions .site-main.loaded h4, .csstransitions .site-main.loaded h5, .csstransitions .site-main.loaded h6, .csstransitions .site-main.loaded p, .csstransitions .site-main.loaded a, .csstransitions .site-main.loaded img, .csstransitions .site-main.loaded div:not(.banner), .csstransitions .site-main.loaded figure, .csstransitions .site-main.loaded span {
   opacity: 1;
 }
-.csstransitions .site-content h1, .csstransitions .site-content h2, .csstransitions .site-content h3, .csstransitions .site-content h4, .csstransitions .site-content h5, .csstransitions .site-content p, .csstransitions .site-content a, .csstransitions .site-content img, .csstransitions .site-content figure, .csstransitions .site-content span {
+.csstransitions .site-main h1, .csstransitions .site-main h2, .csstransitions .site-main h3, .csstransitions .site-main h4, .csstransitions .site-main h5, .csstransitions .site-main h6, .csstransitions .site-main p, .csstransitions .site-main a, .csstransitions .site-main img, .csstransitions .site-main div:not(.banner), .csstransitions .site-main figure, .csstransitions .site-main span {
   opacity: 0;
   -moz-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+}
+
+.site-main,
+.site-main p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.65em;
+  margin-bottom: 1em;
+}
+
+.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6 {
+  margin: 2.5em 0 1em;
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2em;
 }
 
 .banner {
@@ -570,21 +596,27 @@ nav.main-navigation .menu-trigger .menu-icon.close {
   max-width: 40em;
   margin: 0 auto;
   color: #797878;
-  font-family: 'Dosis';
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
   font-size: 40px;
   font-variant: normal;
   line-height: 1.25em;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 5%;
 }
 .banner-content h1 {
   color: #797878;
-  font-family: 'Dosis';
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
   font-size: 40px;
   font-variant: normal;
   font-weight: normal;
   letter-spacing: 0;
   line-height: 1.25em;
+  margin: 0 !important;
+}
+@media only screen and (min-width: 769px) {
+  .banner-content {
+    padding: 30px 0;
+  }
 }
 
 .banner.logo {
@@ -610,14 +642,14 @@ nav.main-navigation .menu-trigger .menu-icon.close {
 }
 .testimonial-entry p,
 .testimonial-entry .testimonial-entry-content {
-  margin-bottom: 1em;
-  font-family: 'Times New Roman', serif;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
   letter-spacing: 0.02em;
 }
 .testimonial-entry .testimonial-entry-title a {
   border: 0;
   color: #3A3A3A;
-  font-size: 1.15em;
+  font-size: 20px;
   font-style: italic;
   line-height: 1.65em;
   cursor: default;

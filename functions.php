@@ -71,7 +71,7 @@ remove_filter('the_content', 'wpautop');
 adding shortcodes
 */
 function banner_shortcode( $atts, $content = null ) {
-	return '<div class="banner"><div class="banner-content">' . $content . '</div></div>';
+	return '<div class="banner"><div class="banner-content"><h1>' . $content . '</h1></div></div>';
 }
 add_shortcode( 'banner', 'banner_shortcode' );
 
