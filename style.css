@@ -242,6 +242,10 @@ em {
   line-height: 1.5em;
 }
 
+figure {
+  margin-top: 50px;
+}
+
 button,
 html input[type='button'],
 input[type='reset'],
@@ -659,9 +663,10 @@ label {
 }
 .testimonial-entry .testimonial-entry-title a.location {
   display: block;
-  padding-left: 1em;
+  padding-left: 25px;
   line-height: 1em;
   margin: 0;
+  font-size: 17px;
 }
 .testimonial-entry .testimonial-featured-image {
   border: none;

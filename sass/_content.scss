@@ -163,9 +163,10 @@
     pointer-events: none;
     &.location {
       display: block;
-      padding-left: 1em;
+      padding-left: 25px;
       line-height: 1em;
       margin: 0;
+      font-size: 17px
     }
   }
 
