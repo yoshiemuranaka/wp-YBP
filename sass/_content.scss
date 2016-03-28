@@ -1,6 +1,6 @@
 .site-content {
   @include mq(medium) {
-    padding: 80px 0 450px;
+    padding: 80px 15px 450px;
   }
 
   height: 100%;
@@ -161,6 +161,12 @@
     cursor: default;
 
     pointer-events: none;
+    &.location {
+      display: block;
+      padding-left: 1em;
+      line-height: 1em;
+      margin: 0;
+    }
   }
 
   .testimonial-featured-image {

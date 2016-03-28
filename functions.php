@@ -62,9 +62,27 @@ function remove_admin_login_header() {
 }
 
 /*
-removing autofilter that adds empty <p> tags 
+disabling comments
 */
-// remove_filter('the_content', 'wpautop');
+add_filter( 'pre_comment_content', 'esc_html' );
+
+/*
+turn off post revisions
+*/
+define( 'WP_POST_REVISIONS', false);
+
+/*
+change autosave interval
+*/
+define( 'AUTOSAVE_INTERVAL', 120 );
+
+/*
+removing some meta data
+*/
+remove_action( 'wp_head', 'wp_generator' ) ;
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+remove_action( 'wp_head', 'rsd_link' ) ;
+
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton

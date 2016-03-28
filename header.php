@@ -17,7 +17,7 @@
 	</div>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="nav-content">
-			<div class="nav-logo"><p><a href="http://localhost:8888/wp-YBP/">Your Best Prep</a></p></div>
+			<div class="nav-logo"><p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Your Best Prep</a></p></div>
 			<div class="nav-menu">
 				<div class="menu-trigger show-sm">
 					<a class="menu-icon hamburger active">&#9776;</a>
