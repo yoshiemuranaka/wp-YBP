@@ -51,6 +51,7 @@
   @include flexbox(column, center);
   @include mq(medium) {
     margin-bottom: 80px;
+    height: 150px;
   }
 
   min-height: 150px;
