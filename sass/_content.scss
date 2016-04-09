@@ -46,10 +46,11 @@
 
   ul {
   margin-bottom: 1.5em;
+  margin-left: 1em;
   li {
     list-style: disc;
 
-    list-style-position: inside;
+    list-style-position: outside;
     list-style-type: circle;
   }
 }

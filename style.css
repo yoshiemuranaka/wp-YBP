@@ -525,10 +525,11 @@ label {
 }
 .site-main ul {
   margin-bottom: 1.5em;
+  margin-left: 1em;
 }
 .site-main ul li {
   list-style: disc;
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: circle;
 }
 
