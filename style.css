@@ -201,25 +201,19 @@ a:visited,
   color: #d88832;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 }
-a:active, a:hover, a:focus,
-a:link:active,
-a:link:hover,
-a:link:focus,
-a:visited:active,
-a:visited:hover,
-a:visited:focus,
-.link-style:active,
-.link-style:hover,
-.link-style:focus,
-.link-style:link:active,
-.link-style:link:hover,
-.link-style:link:focus,
-.link-style:visited:active,
-.link-style:visited:hover,
-.link-style:visited:focus {
+
+a:active, a:hover, a:focus {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
+  outline: none !important;
+}
+
+.link-style:active, .link-style:hover, .link-style:focus {
+  color: #BF792D;
+  border-bottom: 0.1em solid #BF792D;
+  outline: none;
 }
 
 strong {
@@ -500,10 +494,10 @@ label {
   }
 }
 
-.csstransitions .site-main.loaded h1, .csstransitions .site-main.loaded h2, .csstransitions .site-main.loaded h3, .csstransitions .site-main.loaded h4, .csstransitions .site-main.loaded h5, .csstransitions .site-main.loaded h6, .csstransitions .site-main.loaded p, .csstransitions .site-main.loaded a, .csstransitions .site-main.loaded img, .csstransitions .site-main.loaded div:not(.banner), .csstransitions .site-main.loaded figure, .csstransitions .site-main.loaded span {
+.csstransitions .site-main.loaded h1, .csstransitions .site-main.loaded h2, .csstransitions .site-main.loaded h3, .csstransitions .site-main.loaded h4, .csstransitions .site-main.loaded h5, .csstransitions .site-main.loaded h6, .csstransitions .site-main.loaded p, .csstransitions .site-main.loaded a, .csstransitions .site-main.loaded img, .csstransitions .site-main.loaded ul, .csstransitions .site-main.loaded div:not(.banner), .csstransitions .site-main.loaded figure, .csstransitions .site-main.loaded span {
   opacity: 1;
 }
-.csstransitions .site-main h1, .csstransitions .site-main h2, .csstransitions .site-main h3, .csstransitions .site-main h4, .csstransitions .site-main h5, .csstransitions .site-main h6, .csstransitions .site-main p, .csstransitions .site-main a, .csstransitions .site-main img, .csstransitions .site-main div:not(.banner), .csstransitions .site-main figure, .csstransitions .site-main span {
+.csstransitions .site-main h1, .csstransitions .site-main h2, .csstransitions .site-main h3, .csstransitions .site-main h4, .csstransitions .site-main h5, .csstransitions .site-main h6, .csstransitions .site-main p, .csstransitions .site-main a, .csstransitions .site-main img, .csstransitions .site-main ul, .csstransitions .site-main div:not(.banner), .csstransitions .site-main figure, .csstransitions .site-main span {
   opacity: 0;
   -moz-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
@@ -523,11 +517,19 @@ label {
 .site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6, .site-main a {
   margin: 2.5em 0 1em;
   font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.2em;
   font-variant: normal;
   letter-spacing: normal;
+}
+.site-main ul {
+  margin-bottom: 1.5em;
+}
+.site-main ul li {
+  list-style: disc;
+  list-style-position: inside;
+  list-style-type: circle;
 }
 
 .banner {
@@ -591,8 +593,12 @@ label {
   fill-opacity: 1;
 }
 
-.no-svg .banner #vivus-header img {
-  display: block;
+.no-svg .banner.logo .logo-fallback {
+  display: block !important;
+}
+
+.banner.logo .logo-fallback {
+  display: none !important;
 }
 
 .banner + figure {

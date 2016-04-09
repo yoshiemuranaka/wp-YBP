@@ -75,11 +75,26 @@ a:visited,
   text-decoration: none;
 
   cursor: pointer;
+  outline: none;
+}
+
+a {
   &:active,
   &:hover,
   &:focus {
     color: $hover;
     border-bottom: 0.1em solid $hover;
+    outline: none !important;
+  }
+}
+
+.link-style {
+  &:active,
+  &:hover,
+  &:focus {
+    color: $hover;
+    border-bottom: 0.1em solid $hover;
+    outline: none;
   }
 }
 

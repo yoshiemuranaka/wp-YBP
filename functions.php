@@ -112,4 +112,12 @@ function logo_shortcode($atts, $content = null) {
 add_shortcode( 'logo', 'logo_shortcode' );
 
 
-
+/*
+removing query strings from static resources
+*/
+function _remove_script_version( $src ){
+	$parts = explode( '?', $src );
+	return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );

@@ -6726,7 +6726,7 @@
 			c2.533,0,4.461-0.435,5.781-1.302c1.32-0.866,1.917-2.334,1.786-4.403c-0.056-0.867-0.234-1.681-0.531-2.435
 			c-0.304-0.756-0.778-1.42-1.433-1.994c-0.651-0.571-1.493-1.024-2.527-1.362c-1.035-0.336-2.311-0.502-3.831-0.502h-2.878
 			l0.757,11.998H205.885z"/>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logoHeader.png" xlink:href="" style="display:none" />
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logoHeader.png" xlink:href="" class="logo-fallback"/>
 		</svg>
 	</div>
 </div>
