@@ -1,6 +1,4 @@
-<div class="banner logo">
-	<div class="banner-content">
-		<svg version="1.1" id="vivus-header" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="vivus-header" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 width="232.542px" height="166.167px" viewBox="0 0 232.542 166.167" enable-background="new 0 0 232.542 166.167" class="logo">
 		<pattern data-ignore="true"  x="90.875" y="103.5" width="72" height="72" patternUnits="userSpaceOnUse" id="BackgroundPattern1_2_" viewBox="72.25 -72 72 72" overflow="visible">
 			<g>
@@ -6728,5 +6726,3 @@
 			l0.757,11.998H205.885z"/>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logoHeader.png" xlink:href="" class="logo-fallback"/>
 		</svg>
-	</div>
-</div>

@@ -62,6 +62,20 @@ function remove_admin_login_header() {
 }
 
 /*
+customize editor capabilities
+*/
+
+$editor = get_role( 'editor' );
+$caps = array(
+    'moderate_comments'
+);
+
+foreach ( $caps as $cap ) {
+    // Remove the capability.
+    $editor->remove_cap( $cap );
+}
+
+/*
 disabling comments
 */
 add_filter( 'pre_comment_content', 'esc_html' );
@@ -103,14 +117,7 @@ adding shortcodes
 function banner_shortcode( $atts, $content = null ) {
 	return '<div class="banner"><div class="banner-content"><h1>' . $content . '</h1></div></div>';
 }
-add_shortcode( 'banner', 'banner_shortcode' );
-
-
-function logo_shortcode($atts, $content = null) {
-	return get_template_part('/images/header', 'logo.svg');
-}
-add_shortcode( 'logo', 'logo_shortcode' );
-
+// add_shortcode( 'banner', 'banner_shortcode' );
 
 /*
 removing query strings from static resources
