@@ -119,6 +119,63 @@ function banner_shortcode( $atts, $content = null ) {
 }
 // add_shortcode( 'banner', 'banner_shortcode' );
 
+
+/*
+creating custom post type
+*/
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  //TEAM MEMBERS POST TYPE
+  register_post_type( 'team_members',
+    array(
+      'labels' => array(
+        'name' => __( 'Team Members' ),
+        'singular_name' => __( 'Team Member' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-groups',
+      'supports' => array(
+           'title',
+            'editor',
+            'thumbnail'
+        )
+    )
+  );
+
+  //TESTIMONIALS POST TYPE
+  register_post_type( 'testimonials',
+    array(
+      'labels' => array(
+        'name' => __( 'Testimonials' ),
+        'singular_name' => __( 'Testimonial' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-format-quote'
+    )
+  );
+
+   //SERVICES POST TYPE
+  register_post_type( 'services',
+    array(
+      'labels' => array(
+        'name' => __( 'Services' ),
+        'singular_name' => __( 'Service' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-admin-site',
+      'supports' => array(
+           'title',
+            'editor',
+            'thumbnail'
+        )
+    )
+  );
+}
+
+
 /*
 removing query strings from static resources
 */
@@ -128,3 +185,4 @@ function _remove_script_version( $src ){
 }
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+

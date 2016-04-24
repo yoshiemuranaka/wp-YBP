@@ -105,10 +105,6 @@
   display: none !important;
 }
 
-.banner + figure {
-  margin-top: -30px;
-}
-
 .banner-content {
   max-width: 40em;
   margin: 0 auto;
@@ -152,74 +148,81 @@
 }
 
 
+//////////////////////
+//  SERVICES  ///////
+////////////////////
+
+.services_post {
+  margin-top: 2.5em;
+}
+
+.services_post__icons {
+  text-align: center;
+  img {
+    display: block;
+    padding: 0 10px;
+    direction: block;
+    margin: 0 auto 15px;
+    @include mq(small-only) {
+      max-width: 250px;
+    }
+  }
+  h3 {
+    margin: 0 auto 5px;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 1em;
+  }
+}
+
+
+//////////////////////
+//  TEAM  ///////////
+////////////////////
+
+.team_member_post {
+  margin-bottom: 2.5em;
+  &:nth-of-type(2) { //this is to reduce white space between blue banner and content only for team page
+    margin-top: -30px;
+  }
+  img {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 300px;
+    width: 100%;
+
+  }
+  .team_member_post__title {
+    margin: 0 !important;
+    font-size: 20px;
+    text-align: center;
+  }
+  .team_member_post__role {
+    font-size: 20px;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
 
 //////////////////////
 //  TESTIMONIALS  ///
 ////////////////////
 
-
-.testimonial-entry {
+.testimonial_post {
   margin-bottom: 2.5em;
-  p,
-  .testimonial-entry-content {
-    margin-bottom: 20px;
-
-    font-family: $serif;
-    letter-spacing: 0.02em;
-  }
-  .testimonial-entry-title a {
-    border: 0;
-
-    color: $default-font;
-    font-size: 20px;
+  .testimonial_post__title {
+    margin: 0 !important;
     font-style: italic;
-    line-height: 1.65em;
-
-    cursor: default;
-
-    pointer-events: none;
-    &.location {
-      display: block;
-      padding-left: 25px;
-      line-height: 1em;
-      margin: 0;
-      font-size: 17px
-    }
+    font-size: 20px;
   }
-
-  .testimonial-featured-image {
-    border: none;
-    cursor: default;
-    pointer-events: none;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-//////////////////////
-//  ICONS  //////////
-////////////////////
-
-
-.services-icons {
-  text-align: center;
-  .icon {
-    display: block;
-    margin: 0 auto;
-    padding: 0 10px;
-    @include mq(small-only) {
-      max-width: 300px;
-    }
-  }
-
-  h3 {
-    margin-top: 1em;
+  .testimonial_post__location {
+    font-style: italic;
     font-size: 18px;
-    padding: 0 1em;
+    padding-left: 1em;
+    margin-top: 5px;
   }
-
 }
+
+
 
 

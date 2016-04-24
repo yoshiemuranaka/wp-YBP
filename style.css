@@ -606,10 +606,6 @@ label {
   display: none !important;
 }
 
-.banner + figure {
-  margin-top: -30px;
-}
-
 .banner-content {
   max-width: 40em;
   margin: 0 auto;
@@ -655,58 +651,67 @@ label {
   padding-top: 35px;
 }
 
-.testimonial-entry {
-  margin-bottom: 2.5em;
-}
-.testimonial-entry p,
-.testimonial-entry .testimonial-entry-content {
-  margin-bottom: 20px;
-  font-family: "Times New Roman", Times, serif;
-  letter-spacing: 0.02em;
-}
-.testimonial-entry .testimonial-entry-title a {
-  border: 0;
-  color: #3A3A3A;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 1.65em;
-  cursor: default;
-  pointer-events: none;
-}
-.testimonial-entry .testimonial-entry-title a.location {
-  display: block;
-  padding-left: 25px;
-  line-height: 1em;
-  margin: 0;
-  font-size: 17px;
-}
-.testimonial-entry .testimonial-featured-image {
-  border: none;
-  cursor: default;
-  pointer-events: none;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
+.services_post {
+  margin-top: 2.5em;
 }
 
-.services-icons {
+.services_post__icons {
   text-align: center;
 }
-.services-icons .icon {
+.services_post__icons img {
   display: block;
-  margin: 0 auto;
   padding: 0 10px;
+  direction: block;
+  margin: 0 auto 15px;
 }
 @media only screen and (max-width: 768px) {
-  .services-icons .icon {
-    max-width: 300px;
+  .services_post__icons img {
+    max-width: 250px;
   }
 }
-.services-icons h3 {
-  margin-top: 1em;
+.services_post__icons h3 {
+  margin: 0 auto 5px;
   font-size: 18px;
+  text-align: center;
   padding: 0 1em;
+}
+
+.team_member_post {
+  margin-bottom: 2.5em;
+}
+.team_member_post:nth-of-type(2) {
+  margin-top: -30px;
+}
+.team_member_post img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 300px;
+  width: 100%;
+}
+.team_member_post .team_member_post__title {
+  margin: 0 !important;
+  font-size: 20px;
+  text-align: center;
+}
+.team_member_post .team_member_post__role {
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.testimonial_post {
+  margin-bottom: 2.5em;
+}
+.testimonial_post .testimonial_post__title {
+  margin: 0 !important;
+  font-style: italic;
+  font-size: 20px;
+}
+.testimonial_post .testimonial_post__location {
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 1em;
+  margin-top: 5px;
 }
 
 footer.site-footer {

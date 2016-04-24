@@ -20,6 +20,21 @@ get_header(); ?>
 			</div>
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
+			
+			<!-- GETTING SERVICES CUSTOM POST TYPE -->
+			<?php 
+				$args = array( 'post_type' => 'testimonials', 'posts_per_page' => 10 );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); 
+			?>
+				  
+				  <div class="testimonial_post">
+				  	<p class="testimonial_post__content"><?php the_content(); ?></p>
+				  	<h3 class="testimonial_post__title">&#8212; <?php the_title(); ?></h3>
+				  	<h3 class="testimonial_post__location"><?php the_field('location') ?></h3>
+				  </div>
+				  
+			<?php endwhile;?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

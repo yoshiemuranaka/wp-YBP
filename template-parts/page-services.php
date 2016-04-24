@@ -19,29 +19,35 @@ get_header(); ?>
 					</h1>
 				</div>
 			</div>
-			<div class="services-icons">
-				<div class="grid">
-					<div class="col one-quarter">
-						<img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/services-icon--test-prep.png" alt="Your Best Prep Services Standardized Test Preparation">
-						<h3>Standardized Test Preparation</h3>	
-					</div>
-					<div class="col one-quarter">
-						<img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/services-icon--academic-subjects.png" alt="Your Best Prep Services Academic Subjects">
-						<h3>Academic Subjects</h3>	
-					</div>
-					<div class="col one-quarter">
-						<img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/services-icon--college-essay.png" alt="Your Best Prep Services College Essay Coaching">
-						<h3>College Essay Coaching</h3>	
-					</div>
-					<div class="col one-quarter">
-						<img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/images/services-icon--differentiated-instruction.png" alt="Your Best Prep Services Differentiated Instruction for Students with Disabilities">
-						<h3>Differentiated Instruction</h3>	
-					</div>
-				</div>
-			</div>
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 
+			<!-- GETTING SERVICES CUSTOM POST TYPE -->
+			<div class="services_post">
+				<?php 
+					$args = array( 'post_type' => 'services', 'posts_per_page' => 10 );
+					$loop = new WP_Query( $args ); 
+				?>
+				<div class="services_post__icons">
+					<div class="grid">
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<div class="col one-quarter">
+				  			<?php the_post_thumbnail();  ?>
+				  			<h3 class="service__caption"><?php the_field('icon_caption') ?></h3>
+							</div>
+					<?php endwhile;?>		
+					</div>
+				</div>
+
+			  <div class="services_post__content">	
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<div class="service_post__content-area">
+				  	<h3 class="service__title"><?php the_title(); ?></h3>
+				  	<p class="service_post__content"><?php the_content(); ?></p>
+					</div>
+				<?php endwhile;?>	
+			  </div>
+			</div> 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
