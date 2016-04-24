@@ -100,6 +100,10 @@ table {
   .col.two-thirds {
     width: 66.6666%;
   }
+
+  .col.one-quarter {
+    width: 25%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .col.sm-two-thirds {
@@ -684,6 +688,25 @@ label {
   margin: 0 auto;
   text-align: center;
   width: 100%;
+}
+
+.services-icons {
+  text-align: center;
+}
+.services-icons .icon {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+  .services-icons .icon {
+    max-width: 300px;
+  }
+}
+.services-icons h3 {
+  margin-top: 1em;
+  font-size: 18px;
+  padding: 0 1em;
 }
 
 footer.site-footer {

@@ -197,3 +197,29 @@
     width: 100%;
   }
 }
+
+//////////////////////
+//  ICONS  //////////
+////////////////////
+
+
+.services-icons {
+  text-align: center;
+  .icon {
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+    @include mq(small-only) {
+      max-width: 300px;
+    }
+  }
+
+  h3 {
+    margin-top: 1em;
+    font-size: 18px;
+    padding: 0 1em;
+  }
+
+}
+
+

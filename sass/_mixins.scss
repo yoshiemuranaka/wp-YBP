@@ -65,6 +65,10 @@
   .col.two-thirds {
     width: 66.6666%
   }
+  .col.one-quarter {
+    width: 25%;
+  }
+
 }
 
 @include mq(small-only) {
