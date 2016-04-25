@@ -5,9 +5,7 @@
   
 			<?php get_template_part('/images/footer', 'logo.svg'); ?>
 
-			<p class="copyright">&copy; 2016 Your Best Prep</p>
-			<a href="mailto:team@yourbestprep.com" class="link-style">team@yourbestprep.com</a>
-			<?php wp_nav_menu( array('container_class' => 'footer-menu', 'menu_id' => 'secondary-menu', 'theme_location' => 'secondary' ) ); ?>
+			<p class="footer-text">&copy; 2016 Your Best Prep | <a href="<?php get_site_url() ?>/disclaimer" class="link-style">Disclaimer</a> and <a href="<?php get_site_url() ?>/login" class="link-style no-wrap"> Student Login</a></p>
 		</footer>
 
 	</div><!-- #page -->

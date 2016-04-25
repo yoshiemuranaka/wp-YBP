@@ -330,6 +330,10 @@ label {
   }
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .main-navigation {
   position: fixed;
   top: 0;
@@ -490,11 +494,11 @@ label {
   height: 100%;
   max-width: 48em;
   margin: 0 auto;
-  padding: 80px 3% 450px;
+  padding: 80px 3% 300px;
 }
 @media only screen and (min-width: 769px) {
   .site-content {
-    padding: 80px 15px 450px;
+    padding: 80px 15px 300px;
   }
 }
 
@@ -722,8 +726,13 @@ footer.site-footer {
   margin: 0 auto;
   padding: 50px 0;
   background-color: #fff;
-  font-size: 0.85em;
   text-align: center;
+}
+footer.site-footer .footer-text {
+  font-size: 1em;
+  color: #797878;
+  margin-top: 20px;
+  padding: 0 3%;
 }
 footer.site-footer a,
 footer.site-footer a:visited,
@@ -749,7 +758,6 @@ footer.site-footer .link-style:link,
 footer.site-footer .link-style {
   cursor: pointer;
   margin-bottom: 0.5em;
-  border-bottom: 0.1em solid #d88832;
   color: #d88832;
   text-decoration: none;
   text-transform: none;
@@ -763,13 +771,6 @@ footer.site-footer .link-style:active,
 footer.site-footer .link-style:hover {
   color: #BF792D;
   border-bottom: 0.1em solid #BF792D;
-}
-footer.site-footer .copyright {
-  color: #797878;
-  font-size: 0.75em;
-}
-footer.site-footer .footer-menu {
-  margin-top: 1em;
 }
 footer.site-footer svg.logo-watermark {
   position: relative;

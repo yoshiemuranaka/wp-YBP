@@ -133,8 +133,9 @@ function create_post_type() {
         'singular_name' => __( 'Team Member' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'menu_icon' => 'dashicons-groups',
+      'rewrite' => array( 'slug' => 'team',),
       'supports' => array(
            'title',
             'editor',
@@ -151,7 +152,8 @@ function create_post_type() {
         'singular_name' => __( 'Testimonial' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
+      'rewrite' => array( 'slug' => 'testimonials',),
       'menu_icon' => 'dashicons-format-quote'
     )
   );
@@ -164,8 +166,9 @@ function create_post_type() {
         'singular_name' => __( 'Service' )
       ),
       'public' => true,
-      'has_archive' => true,
+      'has_archive' => false,
       'menu_icon' => 'dashicons-admin-site',
+      'rewrite' => array( 'slug' => 'services',),
       'supports' => array(
            'title',
             'editor',
