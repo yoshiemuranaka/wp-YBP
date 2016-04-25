@@ -29,7 +29,9 @@ get_header(); ?>
 			?>
 				  
 				  <div class="team_member_post">
-				  	<?php the_post_thumbnail();  ?>
+				  	<div class="team_member_post__img">
+				  		<?php the_post_thumbnail();  ?>
+				  	</div>
 				  	<h3 class="team_member_post__title"><?php the_title(); ?></h3>
 				  	<h3 class="team_member_post__role"><?php the_field('role') ?></h3>
 				  	<p class="team_member_post__content"><?php the_content(); ?></p>

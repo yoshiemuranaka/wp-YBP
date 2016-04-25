@@ -106,26 +106,6 @@ em {
   font-style: italic;
 }
 
-//////////////////
-//  MEDIA  //////
-////////////////
-
-.wp-cation {
-  margin: 0 auto;
-}
-
-.wp-caption-text {
-   margin: 2.5em 0 1em;
-
-  font-family: $sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5em;
-}
-
-figure {
-  margin-top: 50px;
-}
 
 //////////////////
 //  FORMS  //////
@@ -197,7 +177,10 @@ textarea {
   font-variant: small-caps;
   letter-spacing: 0.15em;
   padding: 5px 10px;
-  width: 80%;
+  width: 100%;
+  @include mq(medium) {
+    width: 80%;
+  }
 }
 
 label {

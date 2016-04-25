@@ -192,12 +192,17 @@
   &:nth-of-type(2) { //this is to reduce white space between blue banner and content only for team page
     margin-top: -30px;
   }
-  img {
+  .team_member_post__img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
     display: block;
     margin: 0 auto 15px;
+  }
+  img {
     max-width: 300px;
-    width: 100%;
-
+    width: 100%;    
   }
   .team_member_post__title {
     margin: 0 !important;

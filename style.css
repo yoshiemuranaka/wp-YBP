@@ -233,22 +233,6 @@ em {
   font-style: italic;
 }
 
-.wp-cation {
-  margin: 0 auto;
-}
-
-.wp-caption-text {
-  margin: 2.5em 0 1em;
-  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5em;
-}
-
-figure {
-  margin-top: 50px;
-}
-
 button,
 html input[type='button'],
 input[type='reset'],
@@ -310,7 +294,27 @@ textarea {
   font-variant: small-caps;
   letter-spacing: 0.15em;
   padding: 5px 10px;
-  width: 80%;
+  width: 100%;
+}
+@media only screen and (min-width: 769px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  textarea {
+    width: 80%;
+  }
 }
 
 label {
@@ -698,9 +702,15 @@ label {
 .team_member_post:nth-of-type(2) {
   margin-top: -30px;
 }
-.team_member_post img {
+.team_member_post .team_member_post__img {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
   display: block;
   margin: 0 auto 15px;
+}
+.team_member_post img {
   max-width: 300px;
   width: 100%;
 }
