@@ -31,6 +31,11 @@ function load_vivus (){
 }
 add_action( 'wp_enqueue_scripts', 'load_vivus' );
 
+function load_scrollToAnchor (){
+  wp_register_script('scrollToAnchor', get_stylesheet_directory_uri() . '/js/vendor/scroll.min.js');
+  wp_enqueue_script('scrollToAnchor');
+}
+add_action( 'wp_enqueue_scripts', 'load_scrollToAnchor' );
 
 /*
 adding footer menu, second nav to child theme

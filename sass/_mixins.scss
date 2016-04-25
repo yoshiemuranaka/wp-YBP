@@ -13,6 +13,12 @@
       @content
     }
   }
+  
+  @else if $point == icon-collapse {
+    @media only screen and (min-width: 568px) and (max-width: 768px){
+      @content
+    }
+  }
 }
 
 //////////////////
@@ -77,6 +83,12 @@
   }
   .col.sm-one-third {
     width: 33.3333%
+  }
+}
+
+@include mq(icon-collapse) {
+  .col.one-quarter.icon-collapse {
+    width: 50%;
   }
 }
 

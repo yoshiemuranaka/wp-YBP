@@ -164,7 +164,7 @@
     direction: block;
     margin: 0 auto 15px;
     @include mq(small-only) {
-      max-width: 250px;
+      max-width: 180px;
     }
   }
   h3 {
@@ -172,6 +172,13 @@
     font-size: 18px;
     text-align: center;
     padding: 0 1em;
+  }
+  a, 
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    color: $default-font;
   }
 }
 

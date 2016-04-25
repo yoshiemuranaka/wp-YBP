@@ -12,7 +12,7 @@
 <div id="page" class="site">
 	<div class="js-animate-menu">
 		<div class="overlay">
-			<?php wp_nav_menu( array('container_class' => 'overlay-menu', 'menu_id' => 'secondary-menu', 'theme_location' => 'secondary' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'secondary-menu', 'container_class' => 'overlay-menu' ) ); ?>
 			</div>
 	</div>
 	<nav id="site-navigation" class="main-navigation" role="navigation">

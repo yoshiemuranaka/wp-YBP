@@ -114,6 +114,11 @@ table {
     width: 33.3333%;
   }
 }
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+  .col.one-quarter.icon-collapse {
+    width: 50%;
+  }
+}
 .col.alpha {
   text-align: left;
 }
@@ -670,7 +675,7 @@ label {
 }
 @media only screen and (max-width: 768px) {
   .services_post__icons img {
-    max-width: 250px;
+    max-width: 180px;
   }
 }
 .services_post__icons h3 {
@@ -678,6 +683,13 @@ label {
   font-size: 18px;
   text-align: center;
   padding: 0 1em;
+}
+.services_post__icons a,
+.services_post__icons a:link,
+.services_post__icons a:visited,
+.services_post__icons a:active,
+.services_post__icons a:hover {
+  color: #3A3A3A;
 }
 
 .team_member_post {
