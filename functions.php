@@ -140,7 +140,7 @@ function create_post_type() {
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-groups',
-      'rewrite' => array( 'slug' => 'team',),
+      'publicly_queryable' => false,
       'supports' => array(
            'title',
             'editor',
@@ -158,7 +158,7 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => false,
-      'rewrite' => array( 'slug' => 'testimonials',),
+      'publicly_queryable' => false,
       'menu_icon' => 'dashicons-format-quote'
     )
   );
@@ -173,7 +173,7 @@ function create_post_type() {
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-admin-site',
-      'rewrite' => array( 'slug' => 'services',),
+      'publicly_queryable' => false,
       'supports' => array(
            'title',
             'editor',
