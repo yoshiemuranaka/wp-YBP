@@ -10,8 +10,15 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
+
+// function load_scrollToAnchor (){
+//   wp_register_script('scrollToAnchor', get_stylesheet_directory_uri() . '/js/vendor/smooth-scroll.js');
+//   wp_enqueue_script('scrollToAnchor');
+// }
+// add_action( 'wp_enqueue_scripts', 'load_scrollToAnchor' );
+
 function load_vendor_javascript() {
-	wp_register_script('modernizr', get_stylesheet_directory_uri() . '/js/modernizr-custom.min.js');
+	wp_register_script('modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr-custom.min.js');
   wp_register_script('interactions', get_stylesheet_directory_uri() . '/js/interactions.js', 'jquery', false );
 	
 	wp_enqueue_script('jquery');
@@ -22,7 +29,7 @@ add_action( 'wp_enqueue_scripts', 'load_vendor_javascript' );
 
 function load_vivus (){
 	if (is_front_page()){ //only load vivus if is front page
-		wp_register_script('vivus', get_stylesheet_directory_uri() . '/js/vivus.js');
+		wp_register_script('vivus', get_stylesheet_directory_uri() . '/js/vendor/vivus.js');
 		wp_register_script('vivus-init', get_stylesheet_directory_uri() . '/js/vivus-init.js');
 	
 		wp_enqueue_script('vivus');
@@ -31,11 +38,6 @@ function load_vivus (){
 }
 add_action( 'wp_enqueue_scripts', 'load_vivus' );
 
-function load_scrollToAnchor (){
-  wp_register_script('scrollToAnchor', get_stylesheet_directory_uri() . '/js/vendor/scroll.min.js');
-  wp_enqueue_script('scrollToAnchor');
-}
-add_action( 'wp_enqueue_scripts', 'load_scrollToAnchor' );
 
 /*
 adding footer menu, second nav to child theme

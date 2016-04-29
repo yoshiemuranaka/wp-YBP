@@ -32,7 +32,7 @@ get_header(); ?>
 					<div class="grid">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 							<div class="col one-quarter icon-collapse">
-				  			<a href="#<?php the_ID(); ?>">
+				  			<a class="js__scroll-anchor" href="#<?php the_ID(); ?>">
 					  			<?php the_post_thumbnail();  ?>
 					  			<h3 class="service__caption"><?php the_field('icon_caption') ?></h3>
 				  			</a>
@@ -43,8 +43,8 @@ get_header(); ?>
 
 			  <div class="services_post__content">	
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<div class="service_post__content-area">
-				  	<h3 class="service__title" id="<?php the_ID(); ?>"><?php the_title(); ?></h3>
+					<div class="service_post__content-area"  id="<?php the_ID(); ?>">
+				  	<h3 class="service__title"><?php the_title(); ?></h3>
 				  	<p class="service_post__content"><?php the_content(); ?></p>
 					</div>
 				<?php endwhile;?>	

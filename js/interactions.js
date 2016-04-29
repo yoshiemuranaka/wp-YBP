@@ -4,6 +4,7 @@ YBP.Interactions = {
 	init: function(){
 		this.events();
 		this.revealContent();
+		this.smoothScroll.init();
 	},
 	
 	events: function(){
@@ -37,6 +38,24 @@ YBP.Interactions = {
 				jQuery('.menu-icon').toggleClass('active');
 			}
 		}	
+	},
+
+	smoothScroll: {
+		init: function() {
+			jQuery('.js__scroll-anchor').on('click', function(event){
+				event.preventDefault();
+				var target = jQuery(this).attr('href');
+				var position = jQuery(target).offset().top;
+				//accounting for sticky nav
+				if(jQuery(window).width() < 769) {
+					position -= 100
+				}
+		    jQuery('html, body').animate({
+		      scrollTop: position
+		  	}, 1000);
+		  	return false;
+			});
+		}
 	}
 };
 
