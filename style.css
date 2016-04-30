@@ -293,7 +293,7 @@ textarea {
   font-variant: small-caps;
   letter-spacing: 0.15em;
   padding: 5px 10px;
-  width: 100%;
+  width: 90%;
 }
 @media only screen and (min-width: 769px) {
   input[type="text"],
