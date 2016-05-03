@@ -6,6 +6,7 @@ $black: #000;
 $white: #fff;
 
 $grey--light: #f9f9f9;
+$grey--medium-light: #eeeeee;
 $grey--medium: #C7C7C7;
 $grey--dark: #797878;
 $grey--darker: #3A3A3A;
@@ -16,6 +17,9 @@ $light-blue: #dae9f2;
 $orange: #d88832;
 $orange--dark: #BF792D;
 
+$red: #E63F3F;
+
+
 $accent: $orange;
 $accent--darker: $orange--dark;
 $body: $grey--light;
@@ -24,6 +28,9 @@ $default-font: $grey--darker;
 $footer-font: $grey--dark;
 $default-link: $accent;
 $hover: $accent--darker;
+
+$error: $red;
+$warning: $red;
 
 $serif: 'Times New Roman', Times, serif;
 $sans-serif:'Dosis', 'Helvetica Neue', Arial, sans-serif;

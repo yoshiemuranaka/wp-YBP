@@ -28,8 +28,12 @@ get_header(); ?>
 				while ( $loop->have_posts() ) : $loop->the_post(); 
 			?>
 				  
-				  <div class="testimonial_post">
-				  	<p class="testimonial_post__content"><?php the_content(); ?></p>
+				  <div class="testimonial_post js-read-more">
+				  	<div class="testimonial_post__content">
+				  		<?php the_content(); ?>
+							<div class="read-more__overlay"></div>
+				  	</div>
+				  	<h3 class="read-more__target js-read-more__target">Read more</h3>
 				  	<h3 class="testimonial_post__title">&#8212; <?php the_title(); ?></h3>
 				  	<h3 class="testimonial_post__location"><?php the_field('location') ?></h3>
 				  </div>

@@ -177,7 +177,7 @@ textarea {
   font-variant: small-caps;
   letter-spacing: 0.15em;
   padding: 5px 10px;
-  width: 90%;
+  width: 100%;
   @include mq(medium) {
     width: 80%;
   }
@@ -188,6 +188,55 @@ label {
   letter-spacing: 0.02em;
   line-height: 1.65em;
   margin: 0.5em 0 1em;
+}
+
+
+// STYLES FOR NINJA FORMS //
+
+.ninja-forms-form-wrap {
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 50px;
+
+  .ninja-forms-error-msg,
+  .ninja-forms-success-msg {
+    background-color: $grey--medium-light;
+    padding: 30px;
+    border-radius: 5px;
+    font-style: italic;
+    margin-bottom: 15px;
+    width: 100%;
+    p {
+      margin-bottom: 0;
+    }
+    @include mq(medium) {
+      width: 80%;
+    }
+  }
+  .ninja-forms-required-items {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    font-style: italic;
+    color: $grey--dark;
+  }
+
+  .ninja-forms-field-error{
+    color: $error;
+    font-style: italic;
+  }
+
+  .field-wrap {
+    margin-bottom: 15px;
+  }
+
+  .ninja-forms-no-display {
+    display: none;
+  }
+
+  .hp-wrap {
+    display: none;
+  }
 }
 
 ///////////////////

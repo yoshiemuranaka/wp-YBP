@@ -10,13 +10,6 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-
-// function load_scrollToAnchor (){
-//   wp_register_script('scrollToAnchor', get_stylesheet_directory_uri() . '/js/vendor/smooth-scroll.js');
-//   wp_enqueue_script('scrollToAnchor');
-// }
-// add_action( 'wp_enqueue_scripts', 'load_scrollToAnchor' );
-
 function load_vendor_javascript() {
 	wp_register_script('modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr-custom.min.js');
   wp_register_script('interactions', get_stylesheet_directory_uri() . '/js/interactions.js', 'jquery', false );
@@ -81,6 +74,10 @@ foreach ( $caps as $cap ) {
     // Remove the capability.
     $editor->remove_cap( $cap );
 }
+
+//customizing for Contact Form 7 plugin
+define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
 
 /*
 disabling comments

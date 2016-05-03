@@ -20,7 +20,10 @@ get_header(); ?>
 				</div>
 			</div>
 			<?php the_content(); ?>
+
 			<?php endwhile; endif; ?>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

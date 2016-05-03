@@ -5,6 +5,7 @@ YBP.Interactions = {
 		this.events();
 		this.revealContent();
 		this.smoothScroll.init();
+		this.readMore.init();
 	},
 	
 	events: function(){
@@ -40,6 +41,17 @@ YBP.Interactions = {
 		}	
 	},
 
+	readMore: {
+		init: function() {
+			jQuery('.js-read-more__target').on('click', YBP.Interactions.readMore.toggleExpand);
+		},
+		toggleExpand: function(link) {
+			var link = jQuery(link.target)
+			link.parent().addClass('expanded');
+		}
+	},
+
+	//delete this
 	smoothScroll: {
 		init: function() {
 			jQuery('.js__scroll-anchor').on('click', function(event){
