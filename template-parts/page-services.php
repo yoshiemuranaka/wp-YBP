@@ -28,27 +28,21 @@ get_header(); ?>
 					$args = array( 'post_type' => 'services', 'posts_per_page' => 10 );
 					$loop = new WP_Query( $args ); 
 				?>
-				<div class="services_post__icons">
-					<div class="grid">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-							<div class="col one-quarter icon-collapse">
-				  			<a class="js__scroll-anchor" href="#<?php echo($post->post_name)?>">
-					  			<?php the_post_thumbnail();  ?>
-					  			<h3 class="service__caption"><?php the_field('icon_caption') ?></h3>
-				  			</a>
+						<div class="grid post">
+							<div class="col one-quarter">
+								<div class="service__img">
+									<?php the_post_thumbnail();  ?>
+								</div>
 							</div>
+							<div class="col three-quarters">	
+								<div class="service_post__content-area">
+									<h3 class="service__title"><?php the_title(); ?></h3>
+									<p class="service_post__content"><?php the_content(); ?></p>
+								</div>
+							</div>
+						</div>
 					<?php endwhile;?>		
-					</div>
-				</div>
-
-			  <div class="services_post__content">	
-				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<div class="service_post__content-area"  id="<?php echo($post->post_name) ?>">
-				  	<h3 class="service__title"><?php the_title(); ?></h3>
-				  	<p class="service_post__content"><?php the_content(); ?></p>
-					</div>
-				<?php endwhile;?>	
-			  </div>
 			</div> 
 
 		</main><!-- #main -->

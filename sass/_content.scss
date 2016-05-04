@@ -156,58 +156,33 @@
   margin-top: 2.5em;
 }
 
-.services_post__icons {
-  text-align: center;
-  img {
-    display: block;
-    padding: 0 10px;
-    direction: block;
-    margin: 0 auto 15px;
-    @include mq(small-only) {
-      max-width: 180px;
-    }
+.services_post .post {
+  margin-bottom: 40px;
+}
+
+.service_post__content-area {
+  @include mq(medium) {
+    padding-left: 25px;
   }
+
+  padding: 0;
   h3 {
-    margin: 0 auto 5px;
-    font-size: 18px;
-    text-align: center;
-    padding: 0 1em;
-  }
-  a, 
-  a:link,
-  a:visited,
-  a:active,
-  a:hover {
-    color: $default-font;
+    margin-top: 0;
   }
 }
 
-.page-template-page-alternative{
-
-  .services_post .post {
-    margin-bottom : 40px;
+.service__img img {
+  @include mq(medium) {
+    max-width: 160px;
   }
 
-  .service_post__content-area {
-    padding: 0;
-    @include mq(medium) {
-      padding-left: 25px;
-    }
-    h3 {
-      margin-top: 0;
-    }
-  }
+  max-width: 170px;
 
-  .service__img img {
-    display: block;
-    padding: 0;
-    direction: block;
-    margin: 0 auto;
-    @include mq(small-only) {
-      max-width: 180px;
-    }
-  }
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 }
+
 
 //////////////////////
 //  TEAM  ///////////
@@ -256,7 +231,9 @@
     border-radius: 5px;
     box-shadow: 1px 1px 2px $grey--medium;
     .read-more__overlay {
-      background-image: linear-gradient(to bottom, transparent, $white);
+      /* fallback */
+      background-image: linear-gradient(to bottom, transparent, $white);   
+      background: url('images/fallback--linear-gradient--white.png');
     }
   }
 
@@ -285,8 +262,9 @@
       width: 100%; 
       height: 50%;
       text-align: center; 
-      
-      background-image: linear-gradient(to bottom, transparent, $grey--light);
+    
+      background-image: linear-gradient(to bottom, transparent, $grey--light);   
+      background: url('images/fallback--linear-gradient--grey.png');      
   }
 
   .read-more__target {
