@@ -67,12 +67,17 @@ customize editor capabilities
 
 $editor = get_role( 'editor' );
 $caps = array(
-    'moderate_comments'
+    'edit_private_posts',
+    'edit_private_pages',
+    'read_private_pages',
+    'read_private_posts',
+    'delete_private_pages',
+    'delete_private_posts'
 );
 
 foreach ( $caps as $cap ) {
     // Remove the capability.
-    $editor->remove_cap( $cap );
+    $editor->add_cap( $cap );
 }
 
 /*
