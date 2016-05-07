@@ -17,6 +17,7 @@ get_header(); ?>
 					</div>
 				</div>
 			<?php the_content(); ?>
+			<span class="cta"><?php the_field('call_to_action') ?></span>
 			<?php endwhile; endif; ?>
 
 		</main><!-- #main -->

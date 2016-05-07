@@ -580,7 +580,7 @@ label {
   margin-bottom: 1em;
 }
 
-.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6, .site-main a {
+.site-main h1, .site-main h2, .site-main h3, .site-main h4, .site-main h5, .site-main h6 {
   margin: 2.5em 0 1em;
   font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
   font-size: 22px;
@@ -597,6 +597,29 @@ label {
   list-style: disc;
   list-style-position: outside;
   list-style-type: circle;
+}
+.site-main a {
+  color: #d88832;
+}
+.site-main .cta {
+  text-align: center;
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2em;
+  font-variant: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+.site-main .cta a {
+  margin: 2.5em 0 1em;
+  font-family: "Dosis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2em;
+  font-variant: normal;
+  letter-spacing: normal;
+  text-align: center;
 }
 
 .banner {
@@ -665,9 +688,24 @@ label {
 }
 
 .banner.logo .logo-fallback {
-  display: none !important;
+  display: none;
 }
 
+@-moz-document url-prefix() {
+  .svg .banner #vivus-header {
+    display: none;
+  }
+
+  .banner.logo .logo-fallback {
+    width: 85%;
+    display: inline-block;
+  }
+  @media only screen and (min-width: 769px) {
+    .banner.logo .logo-fallback {
+      width: 100%;
+    }
+  }
+}
 .banner-content {
   max-width: 40em;
   margin: 0 auto;

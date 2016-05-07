@@ -33,7 +33,7 @@
 }
 
 .site-main {
-  h1,h2,h3,h4,h5,h6, a {
+  h1,h2,h3,h4,h5,h6 {
     margin: 2.5em 0 1em;
 
     font-family: $sans-serif;
@@ -45,18 +45,42 @@
   }
 
   ul {
-  margin-bottom: 1.5em;
-  margin-left: 1em;
-  li {
-    list-style: disc;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    li {
+      list-style: disc;
 
-    list-style-position: outside;
-    list-style-type: circle;
+      list-style-position: outside;
+      list-style-type: circle;
+    }
+  }
+
+  a {
+    color: $accent;
+  }
+  .cta  {
+    text-align: center;
+    font-family: $sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2em;
+    font-variant: normal;
+    letter-spacing: normal;
+    text-align: center;
+    a {
+      margin: 2.5em 0 1em;
+
+      font-family: $sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.2em;
+      font-variant: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
   }
 }
 
-
-}
 
 .banner {
   @include boxshadow($grey--medium);
@@ -102,7 +126,21 @@
 }
 
 .banner.logo .logo-fallback {
-  display: none !important;
+  display: none;
+}
+
+//work around for firefox browser with partial svg support
+@-moz-document url-prefix() {
+  .svg .banner #vivus-header {
+    display: none;
+  }
+  .banner.logo .logo-fallback {
+    width: 85%;
+    display: inline-block;
+    @include mq(medium) {
+      width: 100%;
+    }
+  }
 }
 
 .banner-content {
